@@ -1,0 +1,64 @@
+{
+  "metadata": {
+    "num_samples": 4615,
+    "num_actions": 25,
+    "val_frac": 0.15,
+    "seed": 13,
+    "source_policy_on_source": {
+      "accuracy_full": 0.7809317708015442,
+      "accuracy_val": 0.72398841381073,
+      "tool_action_accuracy_val": NaN
+    }
+  },
+  "results": [
+    {
+      "method": "unlock_pure_vector",
+      "family": "pure_vector_policy",
+      "adapter_params": 0,
+      "trained_params": 0,
+      "eval_seconds": 0.08679515728726983,
+      "accuracy_full": 0.4816901385784149,
+      "accuracy_val": 0.5043352842330933,
+      "policy_consistency_full": 0.5401949882507324,
+      "policy_consistency_val": 0.5534682273864746,
+      "tool_action_accuracy_val": NaN,
+      "training_signal": "source_policy_pseudo_labels_contrastive_directions",
+      "train_seconds": 0.11827064165845513,
+      "target_labels_used": false,
+      "target_gradient_steps": 0,
+      "source_online_query": 0,
+      "fit_samples": 3305,
+      "source_pseudo_label_counts": [
+        320,
+        676,
+        583,
+        0,
+        102,
+        0,
+        495,
+        597,
+        176,
+        0,
+        92,
+        0,
+        0,
+        33,
+        49,
+        182,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_confidence": 0.5,
+      "bias_scale": 0.1,
+      "logit_scale": 20.0,
+      "stored_vector_params": 53273
+    }
+  ]
+}

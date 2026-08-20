@@ -1,0 +1,1692 @@
+{
+  "summary": {
+    "num_tasks": 362,
+    "num_db_failed_tasks": 101,
+    "db_fail_rate": 0.27900552486187846
+  },
+  "first_error_types": {
+    "wrong_policy_action": 75,
+    "execution_error": 15,
+    "missed_stop_or_transfer": 4,
+    "stop_or_transfer_too_early": 3,
+    "wrong_write_action": 3,
+    "write_execution_error": 1
+  },
+  "first_error_transitions": {
+    "ASK_USER->ACT_RETRIEVE_USER": 20,
+    "ACT_RETRIEVE_USER->VERIFY": 13,
+    "ACT_RETRIEVE_ORDER->VERIFY": 10,
+    "ACT_RETRIEVE_ORDER->ASK_USER": 9,
+    "ACT_RETRIEVE_USER->ACT_RETRIEVE_USER": 8,
+    "ASK_USER->VERIFY": 5,
+    "ACT_RETRIEVE_USER->ASK_USER": 5,
+    "ACT_RETRIEVE_RESERVATION->THINK": 4,
+    "ACT_RETRIEVE_RESERVATION->ASK_USER": 3,
+    "ASK_USER->ASK_USER": 3,
+    "VERIFY->ACT_RETRIEVE_USER": 2,
+    "ASK_USER->ACT_RETRIEVE_RESERVATION": 2,
+    "ASK_USER->ANSWER": 2,
+    "ACT_RETRIEVE_USER->ACT_RETRIEVE_ORDER": 2,
+    "VERIFY->ACT_RETRIEVE_CATALOG": 2,
+    "ASK_USER->ACT_SEARCH_FLIGHT": 1,
+    "VERIFY->ACT_UPDATE_RESERVATION_PASSENGER": 1,
+    "ACT_RETRIEVE_RESERVATION->VERIFY": 1,
+    "VERIFY->ACT_UPDATE_USER_ADDRESS": 1,
+    "ACT_UPDATE_ORDER_ITEMS->ASK_USER": 1,
+    "ACT_RETRIEVE_ORDER->ACT_RETRIEVE_PRODUCT": 1,
+    "START->VERIFY": 1,
+    "ACT_RETRIEVE_ORDER->ANSWER": 1,
+    "ACT_RETRIEVE_PRODUCT->VERIFY": 1,
+    "VERIFY->ACT_UPDATE_ORDER_ITEMS": 1,
+    "START->ANSWER": 1
+  },
+  "transition_db_fail_probability": [
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_USER_ADDRESS",
+      "count": 15,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_RESERVATION_CANCEL",
+      "count": 12,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_USER_ADDRESS->ASK_USER",
+      "count": 8,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_CANCEL->ANSWER",
+      "count": 7,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->THINK",
+      "count": 7,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_CANCEL->ASK_USER",
+      "count": 6,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_USER_ADDRESS->ANSWER",
+      "count": 6,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ASK_USER->ACT_UPDATE_ORDER_ITEMS",
+      "count": 5,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_ORDER_PAYMENT",
+      "count": 5,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ADDRESS->ACT_UPDATE_ORDER_ADDRESS",
+      "count": 5,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->ACT_UPDATE_RESERVATION_FLIGHT",
+      "count": 4,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "VERIFY->ACT_SEND_CERTIFICATE",
+      "count": 4,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_SEND_CERTIFICATE->ASK_USER",
+      "count": 4,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->ACT_RETRIEVE_USER",
+      "count": 4,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->ACT_UPDATE_RESERVATION_CANCEL",
+      "count": 3,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_PAYMENT->ANSWER",
+      "count": 3,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ADDRESS->ACT_UPDATE_ORDER_ITEMS",
+      "count": 3,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_RESERVATION_PASSENGER",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_RESERVATION_BOOK",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_CANCEL->ACT_UPDATE_RESERVATION_CANCEL",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_CANCEL->ACT_UPDATE_ORDER_ITEMS",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ACT_RETRIEVE_CATALOG",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ACT_RETRIEVE_PRODUCT",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_USER_ADDRESS->ACT_RETRIEVE_CATALOG",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_PAYMENT->ASK_USER",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ADDRESS->VERIFY",
+      "count": 2,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->ACT_UPDATE_RESERVATION_FLIGHT",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_PASSENGER->ACT_UPDATE_RESERVATION_FLIGHT",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->ACT_UPDATE_RESERVATION_BAGGAGE",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_BAGGAGE->ANSWER",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_BOOK->THINK",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_BOOK->ANSWER",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->ACT_UPDATE_RESERVATION_FLIGHT",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "THINK->ACT_UPDATE_RESERVATION_FLIGHT",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_CANCEL->ACT_RETRIEVE_RESERVATION",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->ACT_COMPUTE",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_CANCEL->ACT_RETRIEVE_USER",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_PASSENGER->ANSWER",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "THINK->ACT_SEND_CERTIFICATE",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_SEND_CERTIFICATE->ANSWER",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ACT_UPDATE_ORDER_CANCEL",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ASK_USER->ACT_UPDATE_USER_ADDRESS",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ASK_USER->ACT_UPDATE_ORDER_ADDRESS",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ANSWER->ACT_UPDATE_ORDER_CANCEL",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_CANCEL->THINK",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "THINK->ACT_UPDATE_ORDER_ADDRESS",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->ACT_UPDATE_ORDER_ADDRESS",
+      "count": 1,
+      "db_fail_probability": 1.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->ACT_UPDATE_ORDER_ITEMS",
+      "count": 9,
+      "db_fail_probability": 0.7777777777777778
+    },
+    {
+      "transition_type": "ASK_USER->ACT_UPDATE_RESERVATION_FLIGHT",
+      "count": 4,
+      "db_fail_probability": 0.75
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->ACT_COMPUTE",
+      "count": 4,
+      "db_fail_probability": 0.75
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->ACT_RETRIEVE_RESERVATION",
+      "count": 63,
+      "db_fail_probability": 0.746031746031746
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ADDRESS->ASK_USER",
+      "count": 15,
+      "db_fail_probability": 0.7333333333333333
+    },
+    {
+      "transition_type": "ASK_USER->ACT_RETRIEVE_CATALOG",
+      "count": 11,
+      "db_fail_probability": 0.7272727272727273
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_ORDER_ADDRESS",
+      "count": 21,
+      "db_fail_probability": 0.7142857142857143
+    },
+    {
+      "transition_type": "VERIFY->ACT_RETRIEVE_RESERVATION",
+      "count": 7,
+      "db_fail_probability": 0.7142857142857143
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ASK_USER",
+      "count": 45,
+      "db_fail_probability": 0.7111111111111111
+    },
+    {
+      "transition_type": "ASK_USER->ACT_RETRIEVE_PRODUCT",
+      "count": 21,
+      "db_fail_probability": 0.6666666666666666
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->ACT_SEARCH_FLIGHT",
+      "count": 5,
+      "db_fail_probability": 0.6
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ACT_UPDATE_ORDER_ITEMS",
+      "count": 17,
+      "db_fail_probability": 0.5882352941176471
+    },
+    {
+      "transition_type": "ANSWER->VERIFY",
+      "count": 33,
+      "db_fail_probability": 0.5757575757575758
+    },
+    {
+      "transition_type": "START->ANSWER",
+      "count": 9,
+      "db_fail_probability": 0.5555555555555556
+    },
+    {
+      "transition_type": "ANSWER->ACT_RETRIEVE_ORDER",
+      "count": 11,
+      "db_fail_probability": 0.5454545454545454
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->ACT_RETRIEVE_RESERVATION",
+      "count": 24,
+      "db_fail_probability": 0.5
+    },
+    {
+      "transition_type": "ACT_COMPUTE->ASK_USER",
+      "count": 8,
+      "db_fail_probability": 0.5
+    },
+    {
+      "transition_type": "ANSWER->ACT_COMPUTE",
+      "count": 6,
+      "db_fail_probability": 0.5
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ACT_RETRIEVE_ORDER",
+      "count": 4,
+      "db_fail_probability": 0.5
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ADDRESS->ANSWER",
+      "count": 4,
+      "db_fail_probability": 0.5
+    },
+    {
+      "transition_type": "ACT_SEARCH_FLIGHT->ACT_COMPUTE",
+      "count": 2,
+      "db_fail_probability": 0.5
+    },
+    {
+      "transition_type": "TRANSFER->ACT_RETRIEVE_RESERVATION",
+      "count": 2,
+      "db_fail_probability": 0.5
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->VERIFY",
+      "count": 25,
+      "db_fail_probability": 0.44
+    },
+    {
+      "transition_type": "ASK_USER->VERIFY",
+      "count": 112,
+      "db_fail_probability": 0.4375
+    },
+    {
+      "transition_type": "THINK->VERIFY",
+      "count": 16,
+      "db_fail_probability": 0.4375
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->ANSWER",
+      "count": 7,
+      "db_fail_probability": 0.42857142857142855
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->VERIFY",
+      "count": 109,
+      "db_fail_probability": 0.42201834862385323
+    },
+    {
+      "transition_type": "ANSWER->ASK_USER",
+      "count": 36,
+      "db_fail_probability": 0.4166666666666667
+    },
+    {
+      "transition_type": "VERIFY->ACT_RETRIEVE_CATALOG",
+      "count": 29,
+      "db_fail_probability": 0.41379310344827586
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_RESERVATION_FLIGHT",
+      "count": 17,
+      "db_fail_probability": 0.4117647058823529
+    },
+    {
+      "transition_type": "ASK_USER->ANSWER",
+      "count": 39,
+      "db_fail_probability": 0.41025641025641024
+    },
+    {
+      "transition_type": "THINK->ACT_RETRIEVE_ORDER",
+      "count": 5,
+      "db_fail_probability": 0.4
+    },
+    {
+      "transition_type": "ANSWER->ANSWER",
+      "count": 41,
+      "db_fail_probability": 0.3902439024390244
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_CATALOG->ACT_RETRIEVE_PRODUCT",
+      "count": 66,
+      "db_fail_probability": 0.3787878787878788
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->ANSWER",
+      "count": 8,
+      "db_fail_probability": 0.375
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->ANSWER",
+      "count": 11,
+      "db_fail_probability": 0.36363636363636365
+    },
+    {
+      "transition_type": "VERIFY->ACT_RETRIEVE_USER",
+      "count": 72,
+      "db_fail_probability": 0.3472222222222222
+    },
+    {
+      "transition_type": "VERIFY->ACT_RETRIEVE_PRODUCT",
+      "count": 55,
+      "db_fail_probability": 0.34545454545454546
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->ASK_USER",
+      "count": 93,
+      "db_fail_probability": 0.34408602150537637
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_ORDER_ITEMS",
+      "count": 214,
+      "db_fail_probability": 0.3364485981308411
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->ACT_RETRIEVE_ORDER",
+      "count": 274,
+      "db_fail_probability": 0.3357664233576642
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->VERIFY",
+      "count": 15,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_COMPUTE->ANSWER",
+      "count": 12,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "VERIFY->ACT_COMPUTE",
+      "count": 9,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->ASK_USER",
+      "count": 6,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ASK_USER->THINK",
+      "count": 6,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ANSWER->TRANSFER",
+      "count": 6,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ASK_USER->ACT_COMPUTE",
+      "count": 3,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->VERIFY",
+      "count": 3,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_SEARCH_FLIGHT->ACT_SEARCH_FLIGHT",
+      "count": 3,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_COMPUTE->ACT_COMPUTE",
+      "count": 3,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->ANSWER",
+      "count": 3,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ANSWER->THINK",
+      "count": 3,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_COMPUTE->ACT_UPDATE_ORDER_ITEMS",
+      "count": 3,
+      "db_fail_probability": 0.3333333333333333
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->ASK_USER",
+      "count": 31,
+      "db_fail_probability": 0.3225806451612903
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->ACT_RETRIEVE_ORDER",
+      "count": 197,
+      "db_fail_probability": 0.30456852791878175
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->ACT_RETRIEVE_USER",
+      "count": 56,
+      "db_fail_probability": 0.30357142857142855
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->VERIFY",
+      "count": 70,
+      "db_fail_probability": 0.3
+    },
+    {
+      "transition_type": "ASK_USER->ACT_RETRIEVE_RESERVATION",
+      "count": 50,
+      "db_fail_probability": 0.3
+    },
+    {
+      "transition_type": "ASK_USER->ASK_USER",
+      "count": 99,
+      "db_fail_probability": 0.29292929292929293
+    },
+    {
+      "transition_type": "VERIFY->ACT_RETRIEVE_ORDER",
+      "count": 31,
+      "db_fail_probability": 0.2903225806451613
+    },
+    {
+      "transition_type": "ASK_USER->ACT_RETRIEVE_USER",
+      "count": 476,
+      "db_fail_probability": 0.28991596638655465
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->ASK_USER",
+      "count": 252,
+      "db_fail_probability": 0.2896825396825397
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ANSWER",
+      "count": 159,
+      "db_fail_probability": 0.2893081761006289
+    },
+    {
+      "transition_type": "START->ASK_USER",
+      "count": 337,
+      "db_fail_probability": 0.2818991097922849
+    },
+    {
+      "transition_type": "ACT_COMPUTE->VERIFY",
+      "count": 25,
+      "db_fail_probability": 0.28
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->VERIFY",
+      "count": 205,
+      "db_fail_probability": 0.2780487804878049
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->ACT_RETRIEVE_PRODUCT",
+      "count": 18,
+      "db_fail_probability": 0.2777777777777778
+    },
+    {
+      "transition_type": "ACT_SEARCH_FLIGHT->ASK_USER",
+      "count": 11,
+      "db_fail_probability": 0.2727272727272727
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->ANSWER",
+      "count": 35,
+      "db_fail_probability": 0.2571428571428571
+    },
+    {
+      "transition_type": "ANSWER->ACT_RETRIEVE_USER",
+      "count": 8,
+      "db_fail_probability": 0.25
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->THINK",
+      "count": 4,
+      "db_fail_probability": 0.25
+    },
+    {
+      "transition_type": "THINK->ACT_UPDATE_ORDER_ITEMS",
+      "count": 4,
+      "db_fail_probability": 0.25
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->ACT_RETRIEVE_PRODUCT",
+      "count": 45,
+      "db_fail_probability": 0.24444444444444444
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_CANCEL->ASK_USER",
+      "count": 26,
+      "db_fail_probability": 0.23076923076923078
+    },
+    {
+      "transition_type": "ASK_USER->ACT_RETRIEVE_ORDER",
+      "count": 110,
+      "db_fail_probability": 0.22727272727272727
+    },
+    {
+      "transition_type": "THINK->ACT_COMPUTE",
+      "count": 18,
+      "db_fail_probability": 0.2222222222222222
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_CANCEL->ACT_UPDATE_ORDER_CANCEL",
+      "count": 9,
+      "db_fail_probability": 0.2222222222222222
+    },
+    {
+      "transition_type": "VERIFY->VERIFY",
+      "count": 172,
+      "db_fail_probability": 0.21511627906976744
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->THINK",
+      "count": 10,
+      "db_fail_probability": 0.2
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->ACT_RETRIEVE_CATALOG",
+      "count": 5,
+      "db_fail_probability": 0.2
+    },
+    {
+      "transition_type": "VERIFY->ACT_UPDATE_ORDER_CANCEL",
+      "count": 46,
+      "db_fail_probability": 0.1956521739130435
+    },
+    {
+      "transition_type": "VERIFY->THINK",
+      "count": 13,
+      "db_fail_probability": 0.15384615384615385
+    },
+    {
+      "transition_type": "VERIFY->ASK_USER",
+      "count": 28,
+      "db_fail_probability": 0.14285714285714285
+    },
+    {
+      "transition_type": "ASK_USER->ACT_SEARCH_FLIGHT",
+      "count": 14,
+      "db_fail_probability": 0.14285714285714285
+    },
+    {
+      "transition_type": "ACT_SEARCH_FLIGHT->VERIFY",
+      "count": 7,
+      "db_fail_probability": 0.14285714285714285
+    },
+    {
+      "transition_type": "VERIFY->ANSWER",
+      "count": 15,
+      "db_fail_probability": 0.13333333333333333
+    },
+    {
+      "transition_type": "TRANSFER->ASK_USER",
+      "count": 15,
+      "db_fail_probability": 0.13333333333333333
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->ASK_USER",
+      "count": 18,
+      "db_fail_probability": 0.1111111111111111
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_CANCEL->ANSWER",
+      "count": 19,
+      "db_fail_probability": 0.10526315789473684
+    },
+    {
+      "transition_type": "START->VERIFY",
+      "count": 12,
+      "db_fail_probability": 0.08333333333333333
+    },
+    {
+      "transition_type": "TRANSFER->TRANSFER",
+      "count": 52,
+      "db_fail_probability": 0.07692307692307693
+    },
+    {
+      "transition_type": "VERIFY->TRANSFER",
+      "count": 29,
+      "db_fail_probability": 0.06896551724137931
+    },
+    {
+      "transition_type": "ASK_USER->TRANSFER",
+      "count": 29,
+      "db_fail_probability": 0.034482758620689655
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->ACT_RETRIEVE_CATALOG",
+      "count": 14,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->TRANSFER",
+      "count": 13,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "TRANSFER->ACT_RETRIEVE_USER",
+      "count": 9,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_USER->TRANSFER",
+      "count": 7,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "TRANSFER->ANSWER",
+      "count": 5,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ACT_COMPUTE",
+      "count": 4,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_SEARCH_FLIGHT->THINK",
+      "count": 3,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "TRANSFER->VERIFY",
+      "count": 3,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "VERIFY->ACT_SEARCH_FLIGHT",
+      "count": 3,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->TRANSFER",
+      "count": 3,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "START->TRANSFER",
+      "count": 2,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "START->ACT_RETRIEVE_RESERVATION",
+      "count": 2,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_RESERVATION->ACT_RETRIEVE_USER",
+      "count": 2,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ANSWER->ACT_RETRIEVE_CATALOG",
+      "count": 2,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_RESERVATION_FLIGHT->TRANSFER",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "THINK->ACT_RETRIEVE_RESERVATION",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "THINK->ACT_SEARCH_FLIGHT",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ANSWER->ACT_RETRIEVE_RESERVATION",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "THINK->ANSWER",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "TRANSFER->THINK",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "THINK->TRANSFER",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->THINK",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_ITEMS->ACT_RETRIEVE_USER",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_UPDATE_ORDER_CANCEL->VERIFY",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ASK_USER->ACT_UPDATE_ORDER_CANCEL",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_PRODUCT->ACT_RETRIEVE_CATALOG",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ACT_RETRIEVE_ORDER->ACT_COMPUTE",
+      "count": 1,
+      "db_fail_probability": 0.0
+    },
+    {
+      "transition_type": "ANSWER->ACT_RETRIEVE_PRODUCT",
+      "count": 1,
+      "db_fail_probability": 0.0
+    }
+  ],
+  "failed_examples": [
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 1,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->VERIFY",
+      "turn_index": 6,
+      "expected_action": "VERIFY",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 2,
+        "trial": 2
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->VERIFY",
+      "turn_index": 6,
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": null,
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 5,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ASK_USER",
+      "expected_tool": "get_user_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 11,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ASK_USER",
+      "expected_tool": "get_user_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 16,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "VERIFY->ACT_RETRIEVE_USER",
+      "turn_index": 8,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": "get_user_details",
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 20,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->VERIFY",
+      "turn_index": 4,
+      "expected_action": "VERIFY",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 20,
+        "trial": 3
+      },
+      "first_error_type": "stop_or_transfer_too_early",
+      "first_error_transition": "ASK_USER->ACT_SEARCH_FLIGHT",
+      "turn_index": 10,
+      "expected_action": "ACT_SEARCH_FLIGHT",
+      "predicted_action": "TRANSFER",
+      "expected_tool": "search_direct_flight",
+      "predicted_tool": "transfer_to_human_agents",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 26,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->THINK",
+      "turn_index": 8,
+      "expected_action": "THINK",
+      "predicted_action": "VERIFY",
+      "expected_tool": "think",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 26,
+        "trial": 2
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_RESERVATION",
+      "turn_index": 6,
+      "expected_action": "ACT_RETRIEVE_RESERVATION",
+      "predicted_action": "VERIFY",
+      "expected_tool": "get_reservation_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 27,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->THINK",
+      "turn_index": 8,
+      "expected_action": "THINK",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": "think",
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 27,
+        "trial": 2
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->THINK",
+      "turn_index": 8,
+      "expected_action": "THINK",
+      "predicted_action": "VERIFY",
+      "expected_tool": "think",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 30,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->ASK_USER",
+      "turn_index": 20,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": null,
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 30,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->ASK_USER",
+      "turn_index": 20,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": null,
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 31,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->VERIFY",
+      "turn_index": 4,
+      "expected_action": "VERIFY",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 31,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->ASK_USER",
+      "turn_index": 6,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": null,
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 34,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->THINK",
+      "turn_index": 8,
+      "expected_action": "THINK",
+      "predicted_action": "VERIFY",
+      "expected_tool": "think",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 34,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "VERIFY->ACT_RETRIEVE_USER",
+      "turn_index": 12,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "VERIFY",
+      "expected_tool": "get_user_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 34,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_RESERVATION",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_RESERVATION",
+      "predicted_action": "VERIFY",
+      "expected_tool": "get_reservation_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 43,
+        "trial": 0
+      },
+      "first_error_type": "wrong_write_action",
+      "first_error_transition": "VERIFY->ACT_UPDATE_RESERVATION_PASSENGER",
+      "turn_index": 10,
+      "expected_action": "ACT_UPDATE_RESERVATION_PASSENGER",
+      "predicted_action": "ACT_UPDATE_RESERVATION_FLIGHT",
+      "expected_tool": "update_reservation_passengers",
+      "predicted_tool": "update_reservation_flights",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 45,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ASK_USER",
+      "expected_tool": "get_user_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 45,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->ASK_USER",
+      "turn_index": 8,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": null,
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 46,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_RESERVATION->VERIFY",
+      "turn_index": 14,
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_RETRIEVE_RESERVATION",
+      "expected_tool": null,
+      "predicted_tool": "get_reservation_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "airline",
+        "task_id": 46,
+        "trial": 2
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->VERIFY",
+      "turn_index": 4,
+      "expected_action": "VERIFY",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 0,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->ASK_USER",
+      "turn_index": 10,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 11,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->ASK_USER",
+      "turn_index": 10,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 11,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->ASK_USER",
+      "turn_index": 10,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 13,
+        "trial": 2
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_ORDER->ASK_USER",
+      "turn_index": 12,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 14,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_ORDER->VERIFY",
+      "turn_index": 14,
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 14,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->VERIFY",
+      "turn_index": 6,
+      "expected_action": "VERIFY",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 15,
+        "trial": 1
+      },
+      "first_error_type": "missed_stop_or_transfer",
+      "first_error_transition": "ASK_USER->ANSWER",
+      "turn_index": 4,
+      "expected_action": "ANSWER",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 15,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_ORDER->ASK_USER",
+      "turn_index": 12,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 16,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_ORDER->VERIFY",
+      "turn_index": 16,
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 19,
+        "trial": 1
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_email",
+      "predicted_tool": "find_user_id_by_email",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 22,
+        "trial": 3
+      },
+      "first_error_type": "wrong_write_action",
+      "first_error_transition": "VERIFY->ACT_UPDATE_USER_ADDRESS",
+      "turn_index": 12,
+      "expected_action": "ACT_UPDATE_USER_ADDRESS",
+      "predicted_action": "ACT_UPDATE_ORDER_ADDRESS",
+      "expected_tool": "modify_user_address",
+      "predicted_tool": "modify_pending_order_address",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 23,
+        "trial": 0
+      },
+      "first_error_type": "stop_or_transfer_too_early",
+      "first_error_transition": "ACT_UPDATE_ORDER_ITEMS->ASK_USER",
+      "turn_index": 28,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ANSWER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 23,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_ORDER->VERIFY",
+      "turn_index": 18,
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 23,
+        "trial": 2
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_ORDER->ACT_RETRIEVE_PRODUCT",
+      "turn_index": 18,
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "VERIFY",
+      "expected_tool": "get_product_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 26,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_ORDER->ASK_USER",
+      "turn_index": 16,
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "expected_tool": null,
+      "predicted_tool": "get_order_details",
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 27,
+        "trial": 3
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->VERIFY",
+      "turn_index": 6,
+      "expected_action": "VERIFY",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 30,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->ACT_RETRIEVE_USER",
+      "turn_index": 6,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ASK_USER",
+      "expected_tool": "get_user_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 30,
+        "trial": 1
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ACT_RETRIEVE_USER->ACT_RETRIEVE_USER",
+      "turn_index": 6,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ASK_USER",
+      "expected_tool": "get_user_details",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 30,
+        "trial": 3
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_email",
+      "predicted_tool": "find_user_id_by_email",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 35,
+        "trial": 0
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ASK_USER",
+      "expected_tool": "find_user_id_by_email",
+      "predicted_tool": null,
+      "execution_ok": false,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 35,
+        "trial": 2
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_email",
+      "predicted_tool": "find_user_id_by_email",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 35,
+        "trial": 3
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_email",
+      "predicted_tool": "find_user_id_by_email",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 36,
+        "trial": 1
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_email",
+      "predicted_tool": "find_user_id_by_email",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 36,
+        "trial": 2
+      },
+      "first_error_type": "wrong_policy_action",
+      "first_error_transition": "START->VERIFY",
+      "turn_index": 2,
+      "expected_action": "VERIFY",
+      "predicted_action": "ASK_USER",
+      "expected_tool": null,
+      "predicted_tool": null,
+      "execution_ok": true,
+      "observation": null
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 39,
+        "trial": 0
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_name_zip",
+      "predicted_tool": "find_user_id_by_name_zip",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 39,
+        "trial": 1
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_email",
+      "predicted_tool": "find_user_id_by_email",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    },
+    {
+      "task": {
+        "domain": "retail",
+        "task_id": 39,
+        "trial": 2
+      },
+      "first_error_type": "execution_error",
+      "first_error_transition": "ASK_USER->ACT_RETRIEVE_USER",
+      "turn_index": 4,
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "expected_tool": "find_user_id_by_name_zip",
+      "predicted_tool": "find_user_id_by_name_zip",
+      "execution_ok": false,
+      "observation": "Error: user not found"
+    }
+  ]
+}

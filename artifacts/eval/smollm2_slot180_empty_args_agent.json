@@ -1,0 +1,2592 @@
+{
+  "summary": {
+    "num_samples": 180,
+    "action_accuracy": 0.9555555555555556,
+    "tool_name_accuracy": 0.3333333333333333,
+    "args_valid_rate": 0.3333333333333333,
+    "args_correct_rate": 0.3333333333333333,
+    "end_to_end_rate": 0.3333333333333333
+  },
+  "records": [
+    {
+      "sample_id": "irrelevance_0",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_1",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_2",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_3",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_4",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_5",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_6",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_7",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_8",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_9",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_10",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_11",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_12",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_13",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_14",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_15",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_16",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_17",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_18",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_19",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_20",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_21",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_22",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_23",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_24",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_25",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_26",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_27",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_28",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_29",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_30",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_31",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_32",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_33",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_34",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_35",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_36",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_37",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_38",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_39",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_40",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_41",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_42",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_43",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_44",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_45",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_46",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_47",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_48",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_49",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_50",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_51",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_52",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_53",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_54",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_55",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_56",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_57",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_58",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_59",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_0",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: side1"
+      ]
+    },
+    {
+      "sample_id": "multiple_3",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: pointA"
+      ]
+    },
+    {
+      "sample_id": "multiple_4",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: initial_speed"
+      ]
+    },
+    {
+      "sample_id": "multiple_7",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: species"
+      ]
+    },
+    {
+      "sample_id": "multiple_10",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: db_name"
+      ]
+    },
+    {
+      "sample_id": "multiple_15",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: coordinates"
+      ]
+    },
+    {
+      "sample_id": "multiple_24",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: start"
+      ]
+    },
+    {
+      "sample_id": "multiple_32",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: radius"
+      ]
+    },
+    {
+      "sample_id": "multiple_42",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: quantity1"
+      ]
+    },
+    {
+      "sample_id": "multiple_45",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: era_name"
+      ]
+    },
+    {
+      "sample_id": "multiple_47",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: vector1"
+      ]
+    },
+    {
+      "sample_id": "multiple_53",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: independent_var"
+      ]
+    },
+    {
+      "sample_id": "multiple_54",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company"
+      ]
+    },
+    {
+      "sample_id": "multiple_55",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company"
+      ]
+    },
+    {
+      "sample_id": "multiple_57",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: principle"
+      ]
+    },
+    {
+      "sample_id": "multiple_62",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_72",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: state"
+      ]
+    },
+    {
+      "sample_id": "multiple_74",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: artwork_name"
+      ]
+    },
+    {
+      "sample_id": "multiple_80",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_81",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: artist"
+      ]
+    },
+    {
+      "sample_id": "multiple_82",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: key"
+      ]
+    },
+    {
+      "sample_id": "multiple_84",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: competition"
+      ]
+    },
+    {
+      "sample_id": "multiple_86",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: numPlayers"
+      ]
+    },
+    {
+      "sample_id": "multiple_88",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: game_title"
+      ]
+    },
+    {
+      "sample_id": "multiple_95",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: amount"
+      ]
+    },
+    {
+      "sample_id": "multiple_97",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: radius"
+      ]
+    },
+    {
+      "sample_id": "multiple_99",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: function"
+      ]
+    },
+    {
+      "sample_id": "multiple_101",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: num1"
+      ]
+    },
+    {
+      "sample_id": "multiple_108",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: temp"
+      ]
+    },
+    {
+      "sample_id": "multiple_112",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_116",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: weight"
+      ]
+    },
+    {
+      "sample_id": "multiple_133",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: investment_amount"
+      ]
+    },
+    {
+      "sample_id": "multiple_135",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: docket"
+      ]
+    },
+    {
+      "sample_id": "multiple_136",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 2,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: players"
+      ]
+    },
+    {
+      "sample_id": "multiple_140",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company_name"
+      ]
+    },
+    {
+      "sample_id": "multiple_142",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_146",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_152",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: country"
+      ]
+    },
+    {
+      "sample_id": "multiple_163",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 2,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company"
+      ]
+    },
+    {
+      "sample_id": "multiple_174",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: team"
+      ]
+    },
+    {
+      "sample_id": "multiple_186",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: dietary_restrictions"
+      ]
+    },
+    {
+      "sample_id": "multiple_199",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_2-1-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: loc"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_4-2-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: loc"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_23-5-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: category"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_24-5-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: category"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_35-11-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 2,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_36-12-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: content"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_38-14-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: skill"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_42-16-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 2,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: namespace"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_50-20-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: city"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_135-51-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: city"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_136-52-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: city"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_138-53-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: city"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_140-54-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: city"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_142-55-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: city"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_160-62-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: user_id"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_182-77-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: a"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_188-82-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company_name"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_216-92-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: origin"
+      ]
+    },
+    {
+      "sample_id": "multiple_8",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_13",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 1,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company"
+      ]
+    },
+    {
+      "sample_id": "multiple_21",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: frequency"
+      ]
+    },
+    {
+      "sample_id": "multiple_27",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: start_location"
+      ]
+    },
+    {
+      "sample_id": "multiple_29",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: function1"
+      ]
+    },
+    {
+      "sample_id": "multiple_33",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: func"
+      ]
+    },
+    {
+      "sample_id": "multiple_35",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 1,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: num1"
+      ]
+    },
+    {
+      "sample_id": "multiple_36",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: distance"
+      ]
+    },
+    {
+      "sample_id": "multiple_38",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: book_name"
+      ]
+    },
+    {
+      "sample_id": "multiple_39",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: source"
+      ]
+    },
+    {
+      "sample_id": "multiple_40",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: current"
+      ]
+    },
+    {
+      "sample_id": "multiple_48",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_52",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: amount"
+      ]
+    },
+    {
+      "sample_id": "multiple_58",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_59",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_61",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_69",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: talkative"
+      ]
+    },
+    {
+      "sample_id": "multiple_73",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: religion"
+      ]
+    },
+    {
+      "sample_id": "multiple_76",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: item"
+      ]
+    },
+    {
+      "sample_id": "multiple_78",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: museum"
+      ]
+    },
+    {
+      "sample_id": "multiple_79",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: museum_name"
+      ]
+    },
+    {
+      "sample_id": "multiple_85",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: team"
+      ]
+    },
+    {
+      "sample_id": "multiple_90",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_91",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: mainIngredient"
+      ]
+    },
+    {
+      "sample_id": "multiple_93",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_100",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: number1"
+      ]
+    },
+    {
+      "sample_id": "multiple_107",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: mass"
+      ]
+    },
+    {
+      "sample_id": "multiple_110",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: snp_id"
+      ]
+    },
+    {
+      "sample_id": "multiple_129",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: principal"
+      ]
+    },
+    {
+      "sample_id": "multiple_144",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 1,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: team"
+      ]
+    },
+    {
+      "sample_id": "multiple_148",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company_name"
+      ]
+    },
+    {
+      "sample_id": "multiple_157",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: name"
+      ]
+    },
+    {
+      "sample_id": "multiple_162",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: building_id"
+      ]
+    },
+    {
+      "sample_id": "multiple_169",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: key"
+      ]
+    },
+    {
+      "sample_id": "multiple_171",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: teams"
+      ]
+    },
+    {
+      "sample_id": "multiple_185",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "multiple_189",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: time"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_0-0-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: new_preferences"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_1-0-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: drink_id"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_3-2-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: loc"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_27-7-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: a"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_34-11-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: location"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_39-14-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: interviewer_name"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_40-15-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: duration"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_41-16-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: namespace"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_43-16-2",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: namespace"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_49-19-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: name"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_62-24-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: type"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_63-25-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: restaurant_id"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_66-27-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: host"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_67-28-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: host"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_68-29-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: nickname"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_71-31-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: nickname"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_126-48-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: project"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_134-51-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 1,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: city"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_137-52-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: ticker"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_139-53-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: ticker"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_141-54-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: ticker"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_143-55-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: ticker"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_144-56-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: perPage"
+      ]
+    }
+  ]
+}

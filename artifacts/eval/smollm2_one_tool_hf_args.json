@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "num_samples": 1,
+    "action_accuracy": 1.0,
+    "tool_name_accuracy": 1.0,
+    "args_valid_rate": 0.0,
+    "args_correct_rate": 0.0,
+    "end_to_end_rate": 0.0
+  },
+  "records": [
+    {
+      "sample_id": "multiple_0",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Extra data: line 1 column 38 (char 37)"
+      ]
+    }
+  ]
+}

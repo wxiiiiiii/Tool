@@ -1,0 +1,83 @@
+experiment:
+  name: phase1_bfcl_frozen_policy_small
+  seed: 13
+  objective: frozen_policy_action_accuracy
+
+models:
+  source:
+    name: qwen3_4b
+    hf_id: Qwen/Qwen3-4B
+    hidden_layer: 24
+    pooling: final_prompt_token
+  targets:
+    - name: gemma3_4b_it
+      hf_id: google/gemma-3-4b-it
+      hidden_layer: middle
+      pooling: final_prompt_token
+    - name: llama31_8b_instruct
+      hf_id: meta-llama/Llama-3.1-8B-Instruct
+      hidden_layer: middle
+      pooling: final_prompt_token
+
+data:
+  benchmark: BFCL_V4
+  phase: single_turn
+  categories:
+    - simple_python
+    - multiple
+    - relevance
+    - irrelevance
+    - live_simple
+    - live_multiple
+    - live_relevance
+    - live_irrelevance
+  max_samples: 5000
+  min_samples: 1000
+  action_space:
+    include_no_tool: true
+    max_tools: 20
+    label_policy: tool_name_only
+  splits:
+    train: 0.7
+    validation: 0.15
+    test: 0.15
+
+representation:
+  z_dim: 256
+  normalize_hidden: layer_norm
+  normalize_z: l2
+
+training:
+  batch_size: 128
+  epochs: 50
+  lr: 0.001
+  weight_decay: 0.0001
+  early_stop_patience: 7
+  adapter:
+    kind: low_rank_mlp
+    rank: 64
+    activation: gelu
+
+baselines:
+  - target_native_generation
+  - target_local_linear_probe
+  - source_policy_random_adapter
+  - source_policy_procrustes_adapter
+  - source_policy_supervised_adapter
+  - unlock_style_latent_alignment
+
+report:
+  primary_metric: action_accuracy
+  secondary_metrics:
+    - macro_f1
+    - no_tool_accuracy
+    - tool_selection_accuracy
+    - per_category_accuracy
+    - calibration_ece
+  ablations:
+    - hidden_layer
+    - z_dim
+    - rank
+    - num_adapter_train_samples
+    - paired_alignment_without_action_labels
+

@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "source_tensor": "artifacts/hidden_states/qwen3_4b_tau_success_policy_traces_hier_v2.pt",
+    "target_tensor": "artifacts/hidden_states/smollm3_3b_tau_success_policy_traces_hier_v2.pt",
+    "source_policy": "artifacts/policies/qwen3_4b_tau_success_policy_hier_v2/source_policy.pt",
+    "strategy": "transition_critical",
+    "k": 512,
+    "feature_mode": "state",
+    "normalization": "center",
+    "target_calibration": "ridge",
+    "target_calibration_params": 262144,
+    "selection_metric": "source_val",
+    "target_labels_used": 0,
+    "target_gradient_steps": 0,
+    "source_online_queries": 0
+  },
+  "results": [
+    {
+      "target": "SmolLM3-3B",
+      "method": "anchor_relative_base",
+      "memory_mode": "none",
+      "k": 512,
+      "memory_k": 0,
+      "beta": 0.0,
+      "temperature": 0.0,
+      "source_val_accuracy": 0.6806358098983765,
+      "source_full_accuracy": 0.7035753130912781,
+      "target_full_accuracy": 0.6071506142616272,
+      "target_val_accuracy": 0.6184971332550049,
+      "source_target_agreement": 0.7445287108421326,
+      "source_target_transition_agreement": 0.5685398542205502,
+      "target_transition_accuracy": 0.3724429814248766,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 0
+    },
+    {
+      "target": "SmolLM3-3B",
+      "method": "jit_residual",
+      "memory_mode": "raw",
+      "k": 512,
+      "memory_k": 8,
+      "beta": 0.5,
+      "temperature": 0.05,
+      "source_val_accuracy": 0.6849710941314697,
+      "source_full_accuracy": 0.7137594819068909,
+      "target_full_accuracy": 0.5878656506538391,
+      "target_val_accuracy": 0.5924855470657349,
+      "source_target_agreement": 0.7570964097976685,
+      "source_target_transition_agreement": 0.5882906183870209,
+      "target_transition_accuracy": 0.34940042323066073,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 3923
+    }
+  ]
+}

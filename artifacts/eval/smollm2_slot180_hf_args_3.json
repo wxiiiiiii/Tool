@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "num_samples": 3,
+    "action_accuracy": 1.0,
+    "tool_name_accuracy": 1.0,
+    "args_valid_rate": 1.0,
+    "args_correct_rate": 1.0,
+    "end_to_end_rate": 1.0
+  },
+  "records": [
+    {
+      "sample_id": "irrelevance_0",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_1",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_2",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    }
+  ]
+}

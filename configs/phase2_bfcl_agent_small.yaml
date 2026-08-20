@@ -1,0 +1,37 @@
+experiment:
+  name: phase2_bfcl_slot_agent_small
+  objective: frozen_policy_tool_call_with_constrained_arguments
+
+data:
+  decision_jsonl: artifacts/bfcl/slot_decisions_small.jsonl
+  action_space:
+    type: slot
+    names:
+      - NO_TOOL
+      - SELECT_TOOL_0
+      - SELECT_TOOL_1
+
+policy:
+  source_policy: artifacts/policies/qwen25_05b_slot180/source_policy.pt
+  target_adapter: artifacts/adapters/smollm2_360m_slot180/target_adapter.pt
+  target_hidden_tensor: artifacts/hidden_states/smollm2_360m_bfcl_slot180.pt
+
+runtime:
+  grounding: slot_to_current_tool
+  argument_generator:
+    kind: oracle # empty | oracle | hf
+    hf_model_id: Qwen/Qwen2.5-0.5B-Instruct
+    max_new_tokens: 192
+  constrained_decoder:
+    kind: json_schema
+    enforce_required: true
+    coerce_scalar_types: true
+    enforce_enum: true
+    drop_unknown_fields: true
+
+metrics:
+  - action_accuracy
+  - tool_name_accuracy
+  - args_valid_rate
+  - args_correct_rate
+  - end_to_end_rate

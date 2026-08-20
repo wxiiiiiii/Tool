@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "source_tensor": "artifacts/hidden_states/qwen3_4b_tau_success_policy_traces_hier_v2.pt",
+    "target_tensor": "artifacts/hidden_states/qwen25_3b_tau_success_policy_traces_hier_v2.pt",
+    "source_policy": "artifacts/policies/qwen3_4b_tau_success_policy_hier_v2/source_policy.pt",
+    "seed": 13,
+    "val_frac": 0.15,
+    "policy_model": "mlp",
+    "hidden_dim": 256,
+    "feature_modes": [
+      "state_pool"
+    ],
+    "target_calibrations": [
+      "ridge"
+    ],
+    "target_labels_used": 0,
+    "target_gradient_steps": 0,
+    "source_online_queries": 0
+  },
+  "results": [
+    {
+      "strategy": "policy_transition_mixture",
+      "k": 512,
+      "normalization": "center",
+      "feature_mode": "state_pool",
+      "target_calibration": "ridge",
+      "policy_model": "mlp",
+      "source_train_accuracy": 0.8126434087753296,
+      "source_val_accuracy": 0.7138728499412537,
+      "source_full_accuracy": 0.7978331446647644,
+      "target_full_accuracy": 0.6088840961456299,
+      "target_val_accuracy": 0.5881502628326416,
+      "source_target_agreement": 0.6803900599479675,
+      "source_target_val_agreement": 0.6661849617958069,
+      "target_transition_accuracy": 0.3618622149071244,
+      "source_target_transition_agreement": 0.46531859863625674,
+      "target_trainable_params": 0,
+      "target_calibration_params": 315844,
+      "target_gradient_steps": 0,
+      "target_labels_used": 0,
+      "source_online_queries": 0,
+      "num_anchors": 512,
+      "num_transition_anchors": 512
+    }
+  ]
+}

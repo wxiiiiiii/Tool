@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "source_tensor": "artifacts/hidden_states/qwen3_4b_tau_success_policy_traces_hier_v2.pt",
+    "target_tensor": "artifacts/hidden_states/qwen25_3b_tau_success_policy_traces_hier_v2.pt",
+    "source_policy": "artifacts/policies/qwen3_4b_tau_success_policy_hier_v2/source_policy.pt",
+    "strategy": "transition_critical",
+    "k": 512,
+    "feature_mode": "state",
+    "normalization": "center",
+    "target_calibration": "ridge",
+    "target_calibration_params": 262144,
+    "selection_metric": "source_val",
+    "target_labels_used": 0,
+    "target_gradient_steps": 0,
+    "source_online_queries": 0
+  },
+  "results": [
+    {
+      "target": "Qwen2.5-3B",
+      "method": "anchor_relative_base",
+      "memory_mode": "none",
+      "k": 512,
+      "memory_k": 0,
+      "beta": 0.0,
+      "gate_margin": 0.0,
+      "temperature": 0.0,
+      "source_val_accuracy": 0.6806358098983765,
+      "source_full_accuracy": 0.7035753130912781,
+      "target_full_accuracy": 0.5744311809539795,
+      "target_val_accuracy": 0.5823699235916138,
+      "source_target_agreement": 0.719393253326416,
+      "source_target_transition_agreement": 0.5309193510463203,
+      "target_transition_accuracy": 0.336938631554197,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 0
+    },
+    {
+      "target": "Qwen2.5-3B",
+      "method": "jit_gated",
+      "memory_mode": "raw",
+      "k": 512,
+      "memory_k": 8,
+      "beta": 0.5,
+      "gate_margin": 0.05,
+      "temperature": 0.05,
+      "source_val_accuracy": 0.689306378364563,
+      "source_full_accuracy": 0.715276300907135,
+      "target_full_accuracy": 0.5629469156265259,
+      "target_val_accuracy": 0.573699414730072,
+      "source_target_agreement": 0.7198266386985779,
+      "source_target_transition_agreement": 0.5490242181989184,
+      "target_transition_accuracy": 0.33129555607806255,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 3923
+    }
+  ]
+}

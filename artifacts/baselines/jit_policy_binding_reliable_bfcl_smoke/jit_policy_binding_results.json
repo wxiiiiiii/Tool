@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "source_tensor": "artifacts/hidden_states/qwen25_05b_bfcl_slot180.pt",
+    "target_tensor": "artifacts/hidden_states/smollm2_360m_bfcl_slot180.pt",
+    "source_policy": "artifacts/policies/qwen25_05b_slot180/source_policy.pt",
+    "strategy": "transition_critical",
+    "k": 64,
+    "feature_mode": "state",
+    "normalization": "center",
+    "target_calibration": "ridge",
+    "target_calibration_params": 4096,
+    "selection_metric": "source_val",
+    "target_labels_used": 0,
+    "target_gradient_steps": 0,
+    "source_online_queries": 0
+  },
+  "results": [
+    {
+      "target": "smollm2-bfcl",
+      "method": "anchor_relative_base",
+      "memory_mode": "none",
+      "k": 64,
+      "memory_k": 0,
+      "beta": 0.0,
+      "gate_margin": 0.0,
+      "temperature": 0.0,
+      "source_val_accuracy": 0.7407407164573669,
+      "source_full_accuracy": 0.8444444537162781,
+      "target_full_accuracy": 0.7666666507720947,
+      "target_val_accuracy": 0.6666666865348816,
+      "source_target_agreement": 0.8166666626930237,
+      "source_target_transition_agreement": 0.0,
+      "target_transition_accuracy": 0.0,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 0
+    },
+    {
+      "target": "smollm2-bfcl",
+      "method": "jit_residual",
+      "memory_mode": "raw",
+      "k": 64,
+      "memory_k": 8,
+      "beta": 0.5,
+      "gate_margin": 0.0,
+      "temperature": 0.05,
+      "source_val_accuracy": 0.7777777910232544,
+      "source_full_accuracy": 0.949999988079071,
+      "target_full_accuracy": 0.8222222328186035,
+      "target_val_accuracy": 0.7037037014961243,
+      "source_target_agreement": 0.8500000238418579,
+      "source_target_transition_agreement": 0.0,
+      "target_transition_accuracy": 0.0,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 153
+    }
+  ]
+}

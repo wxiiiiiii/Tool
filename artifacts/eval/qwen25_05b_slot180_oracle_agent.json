@@ -1,0 +1,3250 @@
+{
+  "summary": {
+    "num_samples": 180,
+    "action_accuracy": 0.9722222222222222,
+    "tool_name_accuracy": 0.9722222222222222,
+    "args_valid_rate": 0.9722222222222222,
+    "args_correct_rate": 0.9611111111111111,
+    "end_to_end_rate": 0.9611111111111111
+  },
+  "records": [
+    {
+      "sample_id": "irrelevance_0",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_1",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_2",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_3",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_4",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_5",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_6",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_7",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_8",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_9",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_10",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_11",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_12",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_13",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_14",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_15",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_16",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_17",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_18",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_19",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_20",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_21",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_22",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_23",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_24",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_25",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_26",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_27",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_28",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_29",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_30",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_31",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_32",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_33",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_34",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_35",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_36",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_37",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_38",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_39",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_40",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_41",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_42",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_43",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_44",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_45",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_46",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_47",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_48",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_49",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_50",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_51",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_52",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_53",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_54",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_55",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_56",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_57",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_58",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "irrelevance_59",
+      "category": "irrelevance",
+      "expected_action": 0,
+      "predicted_action": 0,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_0",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "triangle_properties.get",
+        "arguments": {
+          "side1": 5,
+          "side2": 4,
+          "side3": 3,
+          "get_area": true,
+          "get_perimeter": true,
+          "get_angles": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_3",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "EuclideanDistance.calculate",
+        "arguments": {
+          "pointA": [
+            3,
+            4
+          ],
+          "pointB": [
+            1,
+            2
+          ],
+          "rounding": 0
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_4",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "kinematics.calculate_displacement",
+        "arguments": {
+          "initial_speed": 20,
+          "acceleration": 10,
+          "time": 5,
+          "rounding": 2
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_7",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "wildlife_population.assess_growth",
+        "arguments": {
+          "species": "deer",
+          "location": "Washington state",
+          "duration": 10
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_10",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "database.modify_columns",
+        "arguments": {
+          "db_name": "employees",
+          "table": "personal_data",
+          "operation": "delete",
+          "columns": [
+            "email",
+            "ssn"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_15",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "solarFarm.potential",
+        "arguments": {
+          "coordinates": [
+            43.653225,
+            -79.383186
+          ],
+          "panelArea": 80000,
+          "month": "December"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_24",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "route_planner.calculate_route",
+        "arguments": {
+          "start": "London",
+          "destination": "Edinburgh",
+          "method": "fastest"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_32",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "geometry.calculate_cone_volume",
+        "arguments": {
+          "radius": 4,
+          "height": 7,
+          "round_off": 0
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_42",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calculate_final_temperature",
+        "arguments": {
+          "quantity1": 2,
+          "temperature1": 300,
+          "quantity2": 3,
+          "temperature2": 400
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_45",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "geology.get_era",
+        "arguments": {
+          "era_name": "Ice age",
+          "calculate_years_ago": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_47",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "cosine_similarity.calculate",
+        "arguments": {
+          "vector1": [
+            3,
+            2,
+            1
+          ],
+          "vector2": [
+            1,
+            2,
+            3
+          ],
+          "rounding": 0
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_53",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "linear_regression",
+        "arguments": {
+          "independent_var": [
+            "interest rates",
+            "unemployment rates"
+          ],
+          "dependent_var": "house_price",
+          "forecast_period": 5
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_54",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "corporate_finance.dividend_data",
+        "arguments": {
+          "company": "Apple Inc",
+          "years": 5,
+          "frequency": "annually"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_55",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "stock_forecast",
+        "arguments": {
+          "company": "Google",
+          "days": 3,
+          "model": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_57",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "financial.compound_interest",
+        "arguments": {
+          "principle": 1000,
+          "rate": 0.05,
+          "time": 10,
+          "n": 4
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_62",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "nature_park.find_nearby",
+        "arguments": {
+          "location": "Boston, MA",
+          "features": [
+            "Camping",
+            "Scenic View"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_72",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "us_history.population_by_state_year",
+        "arguments": {
+          "state": "California",
+          "year": 1970
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_74",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "art_auction.fetch_artwork_price",
+        "arguments": {
+          "artwork_name": "Starry Night",
+          "artist": "Van Gogh",
+          "platform": "all"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_80",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "music_shop.find_nearby",
+        "arguments": {
+          "location": "Nashville, TN",
+          "services": [
+            "Violin Lessons"
+          ],
+          "instruments": [
+            "Guitars"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_81",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "concert.book_ticket",
+        "arguments": {
+          "artist": "Eminem",
+          "location": "New York City",
+          "add_ons": [
+            "Backstage Pass"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_82",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "music.generate",
+        "arguments": {
+          "key": "C Major",
+          "tempo": 120,
+          "time_signature": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_84",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "getTopGoalScorers",
+        "arguments": {
+          "competition": "UEFA Champions League",
+          "team": "Barcelona",
+          "number": 10
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_86",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "BoardGameGeek.recommend",
+        "arguments": {
+          "numPlayers": 2,
+          "category": "strategy",
+          "difficulty": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_88",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "video_games.get_player_count",
+        "arguments": {
+          "game_title": "World of Warcraft",
+          "year": 2020,
+          "platform": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_95",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "currency_exchange.convert",
+        "arguments": {
+          "amount": 200,
+          "from_currency": "EUR",
+          "to_currency": "USD",
+          "live_conversion": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_97",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "geometry.area_circle",
+        "arguments": {
+          "radius": 10,
+          "units": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_99",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calculus.derivative",
+        "arguments": {
+          "function": "2x**2",
+          "value": 1,
+          "function_variable": "x"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_101",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "math.gcd",
+        "arguments": {
+          "num1": 12,
+          "num2": 18
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_108",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calc_heat_capacity",
+        "arguments": {
+          "temp": 298,
+          "volume": 10,
+          "gas": "air"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_112",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "forest_growth_forecast",
+        "arguments": {
+          "location": "Yellowstone National Park",
+          "years": 5,
+          "include_human_impact": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_116",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calculate_bmi",
+        "arguments": {
+          "weight": 85,
+          "height": 180,
+          "unit": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_133",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calculate_mutual_fund_balance",
+        "arguments": {
+          "investment_amount": 50000,
+          "annual_yield": 0.05,
+          "years": 3
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_135",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_case_info",
+        "arguments": {
+          "docket": "2022/AL2562",
+          "court": "California",
+          "info_type": "victim"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_136",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_crime_rate",
+        "arguments": {
+          "city": "San Francisco",
+          "state": "California",
+          "type": "violent",
+          "year": 2020
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_140",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "lawsuits_search",
+        "arguments": {
+          "company_name": "Google",
+          "location": "California",
+          "year": 2020,
+          "case_type": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_142",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "weather.humidity_forecast",
+        "arguments": {
+          "location": "Miami",
+          "days": 7,
+          "min_humidity": 0
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_146",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "restaurant.find_nearby",
+        "arguments": {
+          "location": "Seattle",
+          "cuisine": "Chinese",
+          "max_distance": 10
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_152",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "history.get_key_events",
+        "arguments": {
+          "country": "Germany",
+          "start_year": 1871,
+          "end_year": 1945,
+          "event_type": [
+            "War"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_163",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 2,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company"
+      ]
+    },
+    {
+      "sample_id": "multiple_174",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "sports_ranking",
+        "arguments": {
+          "team": "Manchester United",
+          "league": "Premier League",
+          "season": 2024
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_186",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "find_recipe",
+        "arguments": {
+          "dietary_restrictions": "vegan",
+          "recipe_type": "dessert",
+          "time": 30
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_199",
+      "category": "multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "forest_growth_forecast",
+        "arguments": {
+          "location": "Yellowstone",
+          "years": 5,
+          "include_human_impact": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_2-1-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "uber.ride",
+        "arguments": {
+          "loc": "2150 Shattuck Ave, Berkeley, CA",
+          "type": "plus",
+          "time": 10
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_4-2-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "uber.ride",
+        "arguments": {
+          "loc": "123 Hanoi Street",
+          "type": "plus",
+          "time": 10
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_23-5-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 2,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: item_id"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_24-5-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "search_products",
+        "arguments": {
+          "color": "",
+          "size": "XL",
+          "category": "clothing",
+          "price_min": 0.0,
+          "price_max": null,
+          "brand": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_35-11-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_tesco_locations",
+        "arguments": {
+          "location": "Letterkenny, Ireland",
+          "radius": 10,
+          "limit": 5
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_36-12-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "todo_add",
+        "arguments": {
+          "content": "go for shopping at 9 pm"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_38-14-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_interviewer_list",
+        "arguments": {
+          "skill": "Python",
+          "experience_level": "Mid-Level",
+          "availability": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_42-16-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 2,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: namespace"
+      ]
+    },
+    {
+      "sample_id": "live_multiple_50-20-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_movies",
+        "arguments": {
+          "city": "Noida",
+          "cinema_hall": "",
+          "movie_date": "04-11-2024",
+          "movie_language": "Hindi",
+          "movie_format": "2D"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_135-51-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "weather.get",
+        "arguments": {
+          "city": "London",
+          "country": "UK",
+          "units": "metric",
+          "include_forecast": false
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_136-52-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "weather.get_weather",
+        "arguments": {
+          "city": "London",
+          "country": "United Kingdom"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_138-53-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "weather.get",
+        "arguments": {
+          "city": "London",
+          "country": "United Kingdom",
+          "units": "metric"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_140-54-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "weather.get",
+        "arguments": {
+          "city": "London",
+          "country": "GB",
+          "units": "metric",
+          "include_forecast": false
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_142-55-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "weather.get_weather_data",
+        "arguments": {
+          "city": "London",
+          "country": "GB",
+          "units": "metric",
+          "language": "en"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_160-62-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_adriel_projects",
+        "arguments": {
+          "user_id": "Adriel",
+          "include_completed": false,
+          "status_filter": "active"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_182-77-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "math_gcd",
+        "arguments": {
+          "a": 100,
+          "b": 120
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_188-82-1",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "holdings.get_13F_HR",
+        "arguments": {
+          "company_name": "Berkshire Hathaway",
+          "cik": "0001067983"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_216-92-0",
+      "category": "live_multiple",
+      "expected_action": 1,
+      "predicted_action": 1,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "find_flights",
+        "arguments": {
+          "origin": "BER",
+          "destination": "JFK",
+          "date": "2021-10-10",
+          "passengers": 2
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_8",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "realestate.find_properties",
+        "arguments": {
+          "location": "SD",
+          "propertyType": "villa",
+          "bedrooms": 3,
+          "budget": {
+            "min": 300000.0,
+            "max": 400000.0
+          }
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_13",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 1,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "",
+      "decode_errors": [
+        "Missing required argument: company"
+      ]
+    },
+    {
+      "sample_id": "multiple_21",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 0,
+      "action_correct": false,
+      "tool_name_correct": false,
+      "args_valid": false,
+      "args_correct": false,
+      "predicted_call": null,
+      "grounding_reason": "policy_selected_no_tool",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_27",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "maps.shortest_path",
+        "arguments": {
+          "start_location": "Paris, France",
+          "end_location": "Rome, Italy",
+          "mode": "transit"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_29",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "functions.intersect",
+        "arguments": {
+          "function1": "3x + 2",
+          "function2": "2x + 3"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_33",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calculate_integral",
+        "arguments": {
+          "func": "3x**2",
+          "a": 1,
+          "b": 2
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_35",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calculate_gcd",
+        "arguments": {
+          "num1": 128,
+          "num2": 256,
+          "algorithm": "euclidean"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_36",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "kinematics.calculate_speed_from_rest",
+        "arguments": {
+          "distance": 20,
+          "time": 4,
+          "initial_speed": 0
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_38",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "library.search_book",
+        "arguments": {
+          "book_name": "The Alchemist",
+          "city": "New York",
+          "availability": false,
+          "genre": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_39",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "ride_hailing.get_rides",
+        "arguments": {
+          "source": "New York",
+          "destination": "Philadelphia",
+          "max_cost": 50
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_40",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "electromagnetism.biot_savart_law",
+        "arguments": {
+          "current": 12,
+          "distance": 8,
+          "mu0": 1.256e-06
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_48",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "library.find_nearby",
+        "arguments": {
+          "location": "New York City",
+          "preferences": [
+            "Pet-friendly",
+            "Disabled Access"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_52",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "currency_conversion",
+        "arguments": {
+          "amount": 100,
+          "from_currency": "Euro",
+          "to_currency": "USD"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_58",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "lawyer.search",
+        "arguments": {
+          "location": "Los Angeles",
+          "expertise": "Divorce"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_59",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "lawyer_finder",
+        "arguments": {
+          "location": "New York",
+          "specialization": [
+            "Criminal Law"
+          ],
+          "experience": 1
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_61",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "landscape_architect.find_specialty",
+        "arguments": {
+          "location": "Portland",
+          "specialization": "small space garden design",
+          "years_experience": 5
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_69",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "five_factor_model.analyse",
+        "arguments": {
+          "talkative": true,
+          "nervous": true,
+          "artistic_interests": false,
+          "lazy": true,
+          "forgiving": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_73",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "religion.get_origin",
+        "arguments": {
+          "religion": "Buddhism"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_76",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "sculpture.create_custom",
+        "arguments": {
+          "item": "horse",
+          "material": "Bronze",
+          "size": 12
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_78",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "museum_info",
+        "arguments": {
+          "museum": "Natural History Museum",
+          "city": "London",
+          "features": [
+            "timings",
+            "exhibitions",
+            "accessibility"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_79",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "exhibition_info",
+        "arguments": {
+          "museum_name": "Museum of Modern Art",
+          "month": 1
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_85",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "soccer_scores.get_scores",
+        "arguments": {
+          "team": "Real Madrid",
+          "league": "La Liga",
+          "rounds": 5
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_90",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "restaurant.find_group",
+        "arguments": {
+          "location": "Seattle",
+          "cuisine": [
+            "Seafood"
+          ],
+          "group_size": 5
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_91",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "recipe.find",
+        "arguments": {
+          "mainIngredient": "apple pie",
+          "ingredientLimit": 4
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_93",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "hotel.book",
+        "arguments": {
+          "location": "New York",
+          "roomType": "deluxe",
+          "nights": 2,
+          "additional_services": [
+            "breakfast"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_100",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "math.hcf",
+        "arguments": {
+          "number1": 36,
+          "number2": 24
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_107",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "calculate_density",
+        "arguments": {
+          "mass": 45,
+          "volume": 15,
+          "unit": "kg/m³"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_110",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "mutation_type.find",
+        "arguments": {
+          "snp_id": "rs6034464",
+          "species": "Homo sapiens"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_129",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "compound_interest",
+        "arguments": {
+          "principal": 10000,
+          "annual_rate": 5.0,
+          "compounding_freq": "monthly",
+          "time_in_years": 5
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_144",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "air_quality",
+        "arguments": {
+          "location": "London",
+          "date": "2022-08-16"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_148",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_stock_info",
+        "arguments": {
+          "company_name": "Apple Inc.",
+          "detail_level": "detailed",
+          "market": "NASDAQ"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_157",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_earliest_reference",
+        "arguments": {
+          "name": "Jesus Christ",
+          "source": "historical records"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_162",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "analyze_structure",
+        "arguments": {
+          "building_id": "B1004",
+          "floors": [
+            2,
+            3,
+            4
+          ],
+          "mode": "dynamic"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_169",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "musical_scale",
+        "arguments": {
+          "key": "C#",
+          "scale_type": "major"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_171",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "game_result.get_winner",
+        "arguments": {
+          "teams": [
+            "Lakers",
+            "Clippers"
+          ],
+          "date": "2021-01-28",
+          "venue": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_185",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "restaurant_search.find_closest",
+        "arguments": {
+          "location": "Boston",
+          "cuisine": "Sushi",
+          "amenities": [
+            "Patio"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "multiple_189",
+      "category": "multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "timezone.convert",
+        "arguments": {
+          "time": "3pm",
+          "from_timezone": "America/New_York",
+          "to_timezone": "Europe/London"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_0-0-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "ChaDri.change_drink",
+        "arguments": {
+          "drink_id": "latte",
+          "new_preferences": {
+            "size": "large",
+            "temperature": "hot",
+            "sweetness_level": "extra",
+            "milk_type": "coconut",
+            "special_instructions": "served boiling hot"
+          }
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_1-0-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "ChaDri.change_drink",
+        "arguments": {
+          "drink_id": "1234",
+          "new_preferences": {
+            "size": "medium",
+            "temperature": "hot",
+            "sweetness_level": "none",
+            "milk_type": "regular",
+            "special_instructions": ""
+          }
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_3-2-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "api.weather",
+        "arguments": {
+          "loc": "Ha Noi, Vietnam"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_27-7-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "add",
+        "arguments": {
+          "a": 100,
+          "b": -40
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_34-11-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_news_report",
+        "arguments": {
+          "location": "Letterkenny, Ireland"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_39-14-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "review_of_interviewer",
+        "arguments": {
+          "interviewer_name": "Charlie Brown",
+          "include_comments": true
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_40-15-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "oven_preheat",
+        "arguments": {
+          "duration": 36,
+          "temperature": 201
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_41-16-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_services",
+        "arguments": {
+          "namespace": "default"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_43-16-2",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "get_services",
+        "arguments": {
+          "namespace": "cascade-sandbox"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_49-19-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "interviewer_review.get",
+        "arguments": {
+          "name": "Charlie Ji"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_62-24-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "todoIdx",
+        "arguments": {
+          "type": "delete",
+          "index": 1
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_63-25-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": false,
+      "predicted_call": {
+        "name": "uber.eat.order",
+        "arguments": {
+          "restaurant_id": "McDonald's",
+          "items": [
+            {
+              "item": "burgers",
+              "quantity": 5
+            },
+            {
+              "item": "chicken wings",
+              "quantity": 6
+            }
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_66-27-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "add_postgres_server",
+        "arguments": {
+          "host": "http://plgah.ca",
+          "port": 5432,
+          "database": "finance_db",
+          "username": "pascal",
+          "password": "123123"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_67-28-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "add_postgres_server",
+        "arguments": {
+          "host": "http://plgah.ca",
+          "port": 5432,
+          "database": "maindb",
+          "username": "pascal",
+          "password": "securepassword123"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_68-29-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "add_postgres_server",
+        "arguments": {
+          "nickname": "ProjectDB",
+          "host": "http://foo.com",
+          "port": 5432,
+          "database": "project_data",
+          "username": "user1",
+          "password": "12345"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_71-31-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "add_postgres_server",
+        "arguments": {
+          "nickname": "EnterpriseDB",
+          "host": "db.company.com",
+          "port": 5432,
+          "database": "sales_data",
+          "username": "dbadmin",
+          "password": "secure*pwd123"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_126-48-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "analysis_api.AnalysisApi.retrieve_analysis",
+        "arguments": {
+          "project": "SUPERFANCY",
+          "component": "AB1010CD",
+          "vulnerability": "ef903ac-893-f00"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_134-51-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "stock_price.get",
+        "arguments": {
+          "ticker": "AAPL",
+          "exchange": "NYSE"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_137-52-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "stock_price.get",
+        "arguments": {
+          "ticker": "AAPL",
+          "exchange": "NASDAQ"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_139-53-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "stock_price.get",
+        "arguments": {
+          "ticker": "AAPL",
+          "exchange": "NASDAQ",
+          "date": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_141-54-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "stock_price.get",
+        "arguments": {
+          "ticker": "AAPL",
+          "exchange": "NASDAQ"
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_143-55-1",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": true,
+      "predicted_call": {
+        "name": "stock_price.get",
+        "arguments": {
+          "ticker": "AAPL",
+          "exchange": "NASDAQ",
+          "date": ""
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    },
+    {
+      "sample_id": "live_multiple_144-56-0",
+      "category": "live_multiple",
+      "expected_action": 2,
+      "predicted_action": 2,
+      "action_correct": true,
+      "tool_name_correct": true,
+      "args_valid": true,
+      "args_correct": false,
+      "predicted_call": {
+        "name": "get_sensor_readings_latest",
+        "arguments": {
+          "perPage": 100,
+          "startingAfter": "",
+          "endingBefore": "",
+          "networkId": [
+            "",
+            "[]"
+          ],
+          "serials": [
+            "",
+            "[]"
+          ],
+          "metrics": [
+            "temperature"
+          ]
+        }
+      },
+      "grounding_reason": "",
+      "decode_errors": []
+    }
+  ]
+}

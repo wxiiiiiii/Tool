@@ -1,0 +1,430 @@
+{
+  "summary": {
+    "method": "native_backbone_prompting",
+    "model_id": "Qwen/Qwen3-4B",
+    "num_samples": 60,
+    "action_accuracy": 0.0
+  },
+  "records": [
+    {
+      "sample_id": "retail_0_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user said, \"Hello! I",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user said they want to exchange a",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_6",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user said they want to exchange a",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_8",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange items in an",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_10",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange items in an",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_12",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange a mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_14",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange a mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange a mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange a mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_20",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user mentioned they want to exchange a",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_22",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange two items:",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_24",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is asking if there's no",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_26",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to exchange two items",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_28",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to exchange two items",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_30",
+      "expected_action": "ACT_UPDATE_ORDER_ITEMS",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, the user has confirmed the exchange options for the mechanical keyboard and",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_32",
+      "expected_action": "ANSWER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user has confirmed the exchange for their",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user said, \"Hello! I",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user said they want to exchange a",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_6",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user said they want to exchange items",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_8",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to exchange items in",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_10",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to exchange items in",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_12",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange two items:",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_14",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange two items from",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange the mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange two items:",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_20",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange the mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_22",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange the mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_24",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange the mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_26",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange two items:",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_28",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange the mechanical keyboard",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_30",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to exchange two items:",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_32",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user has decided to exchange just the",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_34",
+      "expected_action": "ACT_UPDATE_ORDER_ITEMS",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user has agreed to exchange the smart",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_36",
+      "expected_action": "ANSWER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user has already confirmed the exchange for",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is asking about the number of",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked how many t-shirt options",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_6",
+      "expected_action": "ACT_RETRIEVE_CATALOG",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked about the number of t",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_8",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked how many t-shirt options",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_10",
+      "expected_action": "ANSWER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked how many T-shirt options",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_12",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is asking to return three items",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_14",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to return some items",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to return some items",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to return some items",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_20",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to return some items they",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_22",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to return some items they",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_24",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to return some items they",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_26",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is trying to return items from",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_28",
+      "expected_action": "VERIFY",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user has confirmed they want to return",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_30",
+      "expected_action": "ACT_UPDATE_ORDER_ITEMS",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user has confirmed they want to return",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_32",
+      "expected_action": "ANSWER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wanted to return the headphones and",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is asking about the number of",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked about the number of t",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_6",
+      "expected_action": "ACT_RETRIEVE_CATALOG",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked about the number of t",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_8",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked about the number of t",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_10",
+      "expected_action": "ASK_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user asked how many T-shirt options",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_12",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is asking to change their pending",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_14",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user is asking to change their pending",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to change their pending orders",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to change their pending orders",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_20",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "OKAY",
+      "raw_output": "<think>\nOkay, let's see. The user wants to change their pending orders",
+      "correct": false
+    }
+  ]
+}

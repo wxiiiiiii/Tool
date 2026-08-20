@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local editor/runtime
+.vscode/
+.agents/
+.codex/
+.env
+*.log
+
+# Large/generated training artifacts
+*.pt
+*.pth
+*.bin
+*.safetensors
+artifacts/hidden_states/
+artifacts/policies/
+artifacts/adapters/
+artifacts/bfcl_raw/
+
+# Papers/local OS metadata
+*.pdf
+*:Zone.Identifier
+.DS_Store

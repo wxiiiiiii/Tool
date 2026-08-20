@@ -1,0 +1,430 @@
+{
+  "summary": {
+    "method": "native_backbone_prompting",
+    "model_id": "Qwen/Qwen2.5-3B-Instruct",
+    "num_samples": 60,
+    "action_accuracy": 0.23333333333333334
+  },
+  "records": [
+    {
+      "sample_id": "retail_0_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "raw_output": "ACT_RETRIEVE_USER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_0_0_6",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_8",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_10",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_0_0_12",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_0_0_14",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_0_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_0_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_20",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_22",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_24",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_26",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_28",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_0_0_30",
+      "expected_action": "ACT_UPDATE_ORDER_ITEMS",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_0_0_32",
+      "expected_action": "ANSWER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "raw_output": "ACT_RETRIEVE_USER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_1_0_6",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "raw_output": "ACT_RETRIEVE_USER",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_8",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "raw_output": "ACT_RETRIEVE_USER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_1_0_10",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "raw_output": "ACT_RETRIEVE_USER",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_12",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_14",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_1_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_1_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_20",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_22",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_24",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_26",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_28",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_30",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_32",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_34",
+      "expected_action": "ACT_UPDATE_ORDER_ITEMS",
+      "predicted_action": "VERIFY",
+      "raw_output": "VERIFY",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_1_0_36",
+      "expected_action": "ANSWER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_USER",
+      "raw_output": "ACT_RETRIEVE_USER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_2_0_6",
+      "expected_action": "ACT_RETRIEVE_CATALOG",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_8",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_2_0_10",
+      "expected_action": "ANSWER",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_12",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_14",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_20",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_22",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_24",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_26",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_28",
+      "expected_action": "VERIFY",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_30",
+      "expected_action": "ACT_UPDATE_ORDER_ITEMS",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_2_0_32",
+      "expected_action": "ANSWER",
+      "predicted_action": "ACT_UPDATE_ORDER_CANCEL",
+      "raw_output": "ACT_UPDATE_ORDER_CANCEL",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_2",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_4",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_6",
+      "expected_action": "ACT_RETRIEVE_CATALOG",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_8",
+      "expected_action": "ACT_RETRIEVE_PRODUCT",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_3_0_10",
+      "expected_action": "ASK_USER",
+      "predicted_action": "ACT_RETRIEVE_PRODUCT",
+      "raw_output": "ACT_RETRIEVE_PRODUCT",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_12",
+      "expected_action": "ACT_RETRIEVE_USER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_14",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_RETRIEVE_ORDER",
+      "raw_output": "ACT_RETRIEVE_ORDER",
+      "correct": true
+    },
+    {
+      "sample_id": "retail_3_0_16",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_18",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    },
+    {
+      "sample_id": "retail_3_0_20",
+      "expected_action": "ACT_RETRIEVE_ORDER",
+      "predicted_action": "ACT_UPDATE_ORDER_ITEMS",
+      "raw_output": "ACT_UPDATE_ORDER_ITEMS",
+      "correct": false
+    }
+  ]
+}

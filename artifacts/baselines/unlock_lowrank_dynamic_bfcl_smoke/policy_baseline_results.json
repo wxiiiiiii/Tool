@@ -1,0 +1,77 @@
+{
+  "metadata": {
+    "num_samples": 90,
+    "num_actions": 3,
+    "val_frac": 0.15,
+    "seed": 13,
+    "source_policy_on_source": {
+      "accuracy_full": 0.9888888597488403,
+      "accuracy_val": 0.9230769276618958,
+      "tool_action_accuracy_val": NaN
+    }
+  },
+  "results": [
+    {
+      "method": "unlock_lowrank_subspace",
+      "family": "lowrank_subspace_alignment",
+      "adapter_params": 0,
+      "trained_params": 61504,
+      "eval_seconds": 0.0,
+      "accuracy_full": 0.9666666388511658,
+      "accuracy_val": 0.7692307829856873,
+      "policy_consistency_full": 0.9777777791023254,
+      "policy_consistency_val": 0.8461538553237915,
+      "tool_action_accuracy_val": NaN,
+      "training_signal": "paired_source_latents_lowrank_closed_form",
+      "train_seconds": 0.07390143600059673,
+      "ridge": 0.001,
+      "rank": 32,
+      "target_labels_used": false,
+      "target_gradient_steps": 0,
+      "source_online_query": 0,
+      "stored_alignment_params": 61504,
+      "stored_direction_params": 259,
+      "fit_samples": 77,
+      "source_pseudo_label_counts": [
+        26,
+        24,
+        27
+      ],
+      "min_confidence": 0.0,
+      "bias_scale": 0.1,
+      "intervention_alpha": 0.0
+    },
+    {
+      "method": "unlock_lowrank_dynamic",
+      "family": "lowrank_subspace_alignment_dynamic_policy",
+      "adapter_params": 0,
+      "trained_params": 61504,
+      "eval_seconds": 0.0,
+      "accuracy_full": 0.9666666388511658,
+      "accuracy_val": 0.7692307829856873,
+      "policy_consistency_full": 0.9777777791023254,
+      "policy_consistency_val": 0.8461538553237915,
+      "tool_action_accuracy_val": NaN,
+      "training_signal": "paired_source_latents_lowrank_closed_form_plus_source_transition_prior",
+      "train_seconds": 0.07390143600059673,
+      "ridge": 0.001,
+      "rank": 32,
+      "target_labels_used": false,
+      "target_gradient_steps": 0,
+      "source_online_query": 0,
+      "stored_alignment_params": 61504,
+      "stored_direction_params": 259,
+      "fit_samples": 77,
+      "source_pseudo_label_counts": [
+        26,
+        24,
+        27
+      ],
+      "min_confidence": 0.0,
+      "bias_scale": 0.1,
+      "dynamic_transition_weight": 0.35,
+      "dynamic_transition_smoothing": 0.1,
+      "intervention_alpha": 0.0
+    }
+  ]
+}

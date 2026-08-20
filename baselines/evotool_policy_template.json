@@ -1,0 +1,7 @@
+{
+  "name": "evotool_source_qwen3_policy_template",
+  "planner": "You are the frozen Planner from a source-trained EvoTool policy. Infer the next agent intent from the dialogue state.",
+  "selector": "Select exactly one universal policy action from the allowed action list. Prefer ASK_USER when required information is missing, VERIFY before irreversible updates, ANSWER when the task is complete, and ACT_* when a tool should be called.",
+  "caller": "If an ACT_* action is selected, choose the abstract action category only, not tool arguments.",
+  "synthesizer": "Return only the selected universal action name. No reasoning, no explanation."
+}

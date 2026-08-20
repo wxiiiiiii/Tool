@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "source_tensor": "artifacts/hidden_states/qwen3_4b_tau_success_policy_traces_hier_v2.pt",
+    "target_tensor": "artifacts/hidden_states/smollm3_3b_tau_success_policy_traces_hier_v2.pt",
+    "source_policy": "artifacts/policies/qwen3_4b_tau_success_policy_hier_v2/source_policy.pt",
+    "strategy": "transition_critical",
+    "k": 512,
+    "feature_mode": "state",
+    "normalization": "center",
+    "target_calibration": "ridge",
+    "target_calibration_params": 262144,
+    "selection_metric": "source_val",
+    "target_labels_used": 0,
+    "target_gradient_steps": 0,
+    "source_online_queries": 0
+  },
+  "results": [
+    {
+      "target": "SmolLM3-3B",
+      "method": "anchor_relative_base",
+      "memory_mode": "none",
+      "k": 512,
+      "memory_k": 0,
+      "beta": 0.0,
+      "gate_margin": 0.0,
+      "temperature": 0.0,
+      "source_val_accuracy": 0.6806358098983765,
+      "source_full_accuracy": 0.7035753130912781,
+      "target_full_accuracy": 0.6071506142616272,
+      "target_val_accuracy": 0.6184971332550049,
+      "source_target_agreement": 0.7445287108421326,
+      "source_target_transition_agreement": 0.5685398542205502,
+      "target_transition_accuracy": 0.3724429814248766,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 0
+    },
+    {
+      "target": "SmolLM3-3B",
+      "method": "jit_gated",
+      "memory_mode": "raw",
+      "k": 512,
+      "memory_k": 8,
+      "beta": 0.5,
+      "gate_margin": 0.05,
+      "temperature": 0.05,
+      "source_val_accuracy": 0.689306378364563,
+      "source_full_accuracy": 0.715276300907135,
+      "target_full_accuracy": 0.5963163375854492,
+      "target_val_accuracy": 0.6040462255477905,
+      "source_target_agreement": 0.7518959641456604,
+      "source_target_transition_agreement": 0.5781801081589466,
+      "target_transition_accuracy": 0.3569245238655067,
+      "target_labels_used": 0,
+      "target_gradient_steps": 0,
+      "source_online_queries": 0,
+      "memory_size": 3923
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "metadata": {
+    "num_samples": 180,
+    "num_actions": 3,
+    "val_frac": 0.15,
+    "seed": 13,
+    "source_policy_on_source": {
+      "accuracy_full": 0.9722222089767456,
+      "accuracy_val": 0.8148148059844971,
+      "tool_action_accuracy_val": NaN
+    }
+  },
+  "results": [
+    {
+      "method": "random_linear_projection",
+      "family": "frozen_source_head",
+      "adapter_params": 61504,
+      "trained_params": 0,
+      "eval_seconds": 0.004337178994319402,
+      "accuracy_full": 0.3333333432674408,
+      "accuracy_val": 0.37037035822868347,
+      "policy_consistency_full": 0.33888888359069824,
+      "policy_consistency_val": 0.40740740299224854,
+      "tool_action_accuracy_val": NaN,
+      "training_signal": "none"
+    },
+    {
+      "method": "pairwise_linear_ridge",
+      "family": "frozen_source_head",
+      "adapter_params": 0,
+      "trained_params": 61504,
+      "eval_seconds": 0.014757362005184405,
+      "accuracy_full": 0.949999988079071,
+      "accuracy_val": 0.6666666865348816,
+      "policy_consistency_full": 0.9555555582046509,
+      "policy_consistency_val": 0.7037037014961243,
+      "tool_action_accuracy_val": NaN,
+      "training_signal": "paired_source_latents",
+      "train_seconds": 0.09590217699587811,
+      "ridge": 0.001
+    },
+    {
+      "method": "unlock_style_latent_mse",
+      "family": "frozen_source_head",
+      "adapter_params": 65664,
+      "trained_params": 65664,
+      "eval_seconds": 0.03202519299520645,
+      "accuracy_full": 0.949999988079071,
+      "accuracy_val": 0.6666666865348816,
+      "policy_consistency_full": 0.9666666388511658,
+      "policy_consistency_val": 0.7777777910232544,
+      "tool_action_accuracy_val": NaN,
+      "training_signal": "paired_source_latents_mse",
+      "train_seconds": 52.33657114600646,
+      "val_mse": 0.008060935884714127
+    },
+    {
+      "method": "target_local_linear_probe",
+      "family": "target_supervised_probe",
+      "adapter_params": 2883,
+      "trained_params": 2883,
+      "train_seconds": 19.467206714005442,
+      "eval_seconds": 0.014966568996896967,
+      "accuracy_full": 0.9555555582046509,
+      "accuracy_val": 0.7037037014961243,
+      "policy_consistency_full": 0.9611111283302307,
+      "policy_consistency_val": 0.7407407164573669,
+      "tool_action_accuracy_val": NaN,
+      "best_val_accuracy": 0.7407407164573669,
+      "training_signal": "target_labels"
+    },
+    {
+      "method": "ours_policy_aware_adapter",
+      "family": "frozen_source_head",
+      "adapter_params": 32864,
+      "trained_params": 32864,
+      "eval_seconds": 0.04324573199846782,
+      "accuracy_full": 0.9555555582046509,
+      "accuracy_val": 0.7037037014961243,
+      "policy_consistency_full": 0.9611111283302307,
+      "policy_consistency_val": 0.7407407164573669,
+      "tool_action_accuracy_val": NaN,
+      "training_signal": "target_labels_ce_frozen_source_head"
+    }
+  ]
+}

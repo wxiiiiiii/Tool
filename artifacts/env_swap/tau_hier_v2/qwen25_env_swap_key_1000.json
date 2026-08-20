@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "method": "tau_environment_swap",
+      "prediction_file": "artifacts/eval/qwen3_to_qwen25_3b_tau_policy_trace_hier_v2_rank256_tw02_seq3.json",
+      "variant": "identity",
+      "binder": "policy_ir",
+      "num_samples": 1000,
+      "num_tasks": 75,
+      "action_accuracy": 0.79,
+      "tool_grounding_accuracy_all": 0.828,
+      "tool_grounding_accuracy_tool_only": 0.7822736030828517,
+      "args_valid_rate_predicted_tool": 0.7837837837837838,
+      "tool_execution_ok_rate_predicted_tool": 0.7355212355212355,
+      "db_hash_match_rate": 0.72,
+      "formal_gt_hash_match_rate": 0.0,
+      "environment_binding_trainable_parameters": 0
+    },
+    {
+      "method": "tau_environment_swap",
+      "prediction_file": "artifacts/eval/qwen3_to_qwen25_3b_tau_policy_trace_hier_v2_rank256_tw02_seq3.json",
+      "variant": "api_rename",
+      "binder": "policy_ir",
+      "num_samples": 1000,
+      "num_tasks": 75,
+      "action_accuracy": 0.79,
+      "tool_grounding_accuracy_all": 0.828,
+      "tool_grounding_accuracy_tool_only": 0.7822736030828517,
+      "args_valid_rate_predicted_tool": 0.7837837837837838,
+      "tool_execution_ok_rate_predicted_tool": 0.7355212355212355,
+      "db_hash_match_rate": 0.72,
+      "formal_gt_hash_match_rate": 0.0,
+      "environment_binding_trainable_parameters": 0
+    },
+    {
+      "method": "tau_environment_swap",
+      "prediction_file": "artifacts/eval/qwen3_to_qwen25_3b_tau_policy_trace_hier_v2_rank256_tw02_seq3.json",
+      "variant": "api_rename",
+      "binder": "concrete_tool_name",
+      "num_samples": 1000,
+      "num_tasks": 75,
+      "action_accuracy": 0.79,
+      "tool_grounding_accuracy_all": 0.481,
+      "tool_grounding_accuracy_tool_only": 0.0,
+      "args_valid_rate_predicted_tool": 0.0,
+      "tool_execution_ok_rate_predicted_tool": 0.0,
+      "db_hash_match_rate": 0.16,
+      "formal_gt_hash_match_rate": 0.0,
+      "environment_binding_trainable_parameters": 0
+    },
+    {
+      "method": "tau_environment_swap",
+      "prediction_file": "artifacts/eval/qwen3_to_qwen25_3b_tau_policy_trace_hier_v2_rank256_tw02_seq3.json",
+      "variant": "tool_order_permutation",
+      "binder": "concrete_tool_slot",
+      "num_samples": 1000,
+      "num_tasks": 75,
+      "action_accuracy": 0.79,
+      "tool_grounding_accuracy_all": 0.456,
+      "tool_grounding_accuracy_tool_only": 0.06551059730250482,
+      "args_valid_rate_predicted_tool": 0.19305019305019305,
+      "tool_execution_ok_rate_predicted_tool": 0.16988416988416988,
+      "db_hash_match_rate": 0.16,
+      "formal_gt_hash_match_rate": 0.0,
+      "environment_binding_trainable_parameters": 0
+    }
+  ]
+}
