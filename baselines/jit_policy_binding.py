@@ -9,6 +9,7 @@ from typing import Any
 import torch
 from torch.nn import functional as F
 
+from baselines import eval_protocol
 from baselines.anchor_relative_policy import (
     build_features,
     build_transition_pairs_from_tensor,
@@ -18,7 +19,8 @@ from baselines.anchor_relative_policy import (
     select_transition_anchor_pairs,
     train_source_relative_policy,
 )
-from universal_agent_policy.data import load_hidden_tensor, split_indices
+from baselines.tool_policy_utils import load_rows
+from universal_agent_policy.data import load_hidden_tensor
 
 
 @dataclass
@@ -65,6 +67,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source-tensor", required=True)
     parser.add_argument("--target-tensor", required=True)
     parser.add_argument("--source-policy", required=True)
+    parser.add_argument("--decision-jsonl", help="Decision rows used for trajectory/task-disjoint split.")
     parser.add_argument("--out-dir", required=True)
     parser.add_argument("--target-name", default="target")
     parser.add_argument("--strategy", default="transition_critical")
@@ -80,6 +83,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--linear-lr", type=float, default=1e-2)
     parser.add_argument("--weight-decay", type=float, default=1e-3)
     parser.add_argument("--val-frac", type=float, default=0.15)
+    parser.add_argument("--split-unit", choices=["decision", "trajectory", "task"], default="trajectory")
+    parser.add_argument("--split-json", help="Load a precomputed split JSON.")
+    parser.add_argument("--write-split-json", help="Write the resolved train/val split for exact reuse.")
     parser.add_argument("--seed", type=int, default=13)
     parser.add_argument("--device", default="cuda")
     parser.add_argument("--memory-modes", nargs="+", default=["raw", "capsule"], choices=["raw", "capsule"])
@@ -453,10 +459,18 @@ def main() -> None:
 
     source = load_hidden_tensor(args.source_tensor)
     target = load_hidden_tensor(args.target_tensor)
+    rows = load_rows(args.decision_jsonl) if args.decision_jsonl else []
     labels = source["y"]
     if len(labels) != len(target["y"]) or not torch.equal(labels, target["y"]):
         raise ValueError("source and target tensors must be paired with identical labels for evaluation")
-    train_idx, val_idx = split_indices(len(labels), args.val_frac, args.seed)
+    if args.split_json:
+        train_idx, val_idx, split_metadata = eval_protocol.load_split(args.split_json, len(labels))
+    else:
+        train_idx, val_idx, split_metadata = eval_protocol.split_indices_for_protocol(
+            len(labels), args.val_frac, args.seed, rows, args.split_unit
+        )
+    if args.write_split_json:
+        eval_protocol.save_split(args.write_split_json, train_idx, val_idx, split_metadata)
     source_logits = load_source_logits(args.source_policy, source["h"], int(labels.max().item()) + 1, device)
     if source_logits is None:
         raise ValueError("source logits are required")
@@ -496,7 +510,12 @@ def main() -> None:
             args.consistency_drop_rate,
             args.seed + 202,
         )
-    pairs = build_transition_pairs_from_tensor(source)
+    val_set = {int(i) for i in val_idx.tolist()}
+    pairs = (
+        eval_protocol.transition_pairs(rows, val_idx)
+        if rows and len(rows) == len(labels)
+        else [(left, right) for left, right in build_transition_pairs_from_tensor(source) if left in val_set and right in val_set]
+    )
 
     results: list[BindingResult] = []
     out_dir = Path(args.out_dir)
@@ -761,6 +780,7 @@ def main() -> None:
         "normalization": args.normalization,
         "target_calibration": args.target_calibration,
         "target_calibration_params": calibration_params,
+        "split": split_metadata,
         "selection_metric": args.selection_metric,
         "memory_filters": args.memory_filters,
         "memory_min_confidence": args.memory_min_confidence,
@@ -785,19 +805,22 @@ def main() -> None:
         f"- Target gradient steps: `0`",
         f"- Source online queries: `0`",
         f"- Anchor-only calibration: `{args.target_calibration}`",
+        f"- Split: `{split_metadata.get('split_unit', 'unknown')}`",
+        f"- Train samples: {split_metadata.get('num_train_samples', 'unknown')}",
+        f"- Held-out samples: {split_metadata.get('num_val_samples', 'unknown')}",
         "",
-        "| Method | Memory | Filter | Memory Size | kNN | beta | gate | temp | Source Val | Source Full | Target Acc | Policy Agreement | Transition Agreement | Gate Open | Changed | Improved | Harmed | B Harm | C Improve |",
+        "| Method | Memory | Filter | Memory Size | kNN | beta | gate | temp | Source Held-out | Target Held-out | Target Full Diagnostic | Policy Agreement | Transition Agreement | Gate Open | Changed | Improved | Harmed | B Harm | C Improve |",
         "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for r in results:
         lines.append(
             f"| {r.method} | {r.memory_mode} | {r.memory_filter} | {r.memory_size} | {r.memory_k} | {r.beta:.2f} | {r.gate_margin:.2f} | {r.temperature:.2f} | "
-            f"{r.source_val_accuracy:.2%} | {r.source_full_accuracy:.2%} | {r.target_full_accuracy:.2%} | "
+            f"{r.source_val_accuracy:.2%} | {r.target_val_accuracy:.2%} | {r.target_full_accuracy:.2%} | "
             f"{r.source_target_agreement:.2%} | {r.source_target_transition_agreement:.2%} | "
             f"{r.gate_open_rate:.2%} | {r.changed_rate:.2%} | {r.improved_rate:.2%} | {r.harmed_rate:.2%} | "
             f"{r.quadrant_b_harmed_rate:.2%} | {r.quadrant_c_improved_rate:.2%} |"
         )
-    best = max(results, key=lambda r: (r.target_full_accuracy, r.source_target_agreement))
+    best = max(results, key=lambda r: (r.target_val_accuracy, r.source_target_agreement))
     lines.extend(
         [
             "",
@@ -805,7 +828,7 @@ def main() -> None:
             "",
             (
                 f"`{best.method}` with `{best.memory_mode}` memory reached "
-                f"{best.target_full_accuracy:.2%} target action accuracy and "
+                f"{best.target_val_accuracy:.2%} held-out target action accuracy and "
                 f"{best.source_target_agreement:.2%} policy agreement."
             ),
         ]

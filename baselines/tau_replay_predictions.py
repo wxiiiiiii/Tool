@@ -6,6 +6,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from baselines import eval_protocol
 from baselines.tool_policy_utils import action_names_from_rows, load_prediction_file, load_rows
 from universal_agent_policy.eval.tau_replay_agent import (
     build_arg_generator,
@@ -41,6 +42,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--arg-torch-dtype", default="float32", choices=["auto", "float16", "bfloat16", "float32"])
     parser.add_argument("--arg-max-new-tokens", type=int, default=192)
     parser.add_argument("--max-samples", type=int, default=-1)
+    parser.add_argument("--split-json", help="Replay only held-out indices from a saved split JSON.")
     return parser.parse_args()
 
 
@@ -53,9 +55,17 @@ def main() -> None:
     ensure_tau_import(args.tau_bench_path)
     rows = load_rows(args.decision_jsonl, args.max_samples)
     predictions_obj = load_prediction_file(args.predictions)
-    prediction_rows = predictions_obj["records"][: len(rows)]
-    if len(prediction_rows) != len(rows):
+    all_prediction_rows = predictions_obj["records"][: len(rows)]
+    if len(all_prediction_rows) != len(rows):
         raise ValueError("prediction records and decision rows must have the same length")
+    split_metadata: dict[str, Any] = {}
+    if args.split_json:
+        _, val_idx, split_metadata = eval_protocol.load_split(args.split_json, len(rows))
+        selected = [int(idx) for idx in val_idx.tolist()]
+        rows = [rows[idx] for idx in selected]
+        prediction_rows = [all_prediction_rows[idx] for idx in selected]
+    else:
+        prediction_rows = all_prediction_rows
 
     historical_calls = historical_tool_call_map(args.trajectories)
     for row in rows:
@@ -178,6 +188,7 @@ def main() -> None:
     summary = {
         "method": predictions_obj.get("summary", {}).get("method", "precomputed_predictions"),
         "prediction_file": args.predictions,
+        "split": split_metadata,
         "num_samples": len(records),
         "num_tasks": len(task_records),
         "action_accuracy": avg(records, "action_correct"),

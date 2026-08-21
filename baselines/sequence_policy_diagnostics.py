@@ -6,6 +6,7 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
+from baselines import eval_protocol
 from baselines.tool_policy_utils import load_prediction_file, load_rows
 
 
@@ -23,6 +24,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--out", required=True)
     parser.add_argument("--markdown-out")
     parser.add_argument("--max-samples", type=int, default=-1)
+    parser.add_argument("--split-json", help="Evaluate only the held-out indices from a saved split JSON.")
     return parser.parse_args()
 
 
@@ -57,14 +59,25 @@ def first_divergence(expected: list[str], predicted: list[str]) -> int:
     return len(expected)
 
 
-def diagnose(rows: list[dict[str, Any]], prediction_path: str, replay_summary: dict[str, Any] | None) -> dict[str, Any]:
+def diagnose(
+    rows: list[dict[str, Any]],
+    prediction_path: str,
+    replay_summary: dict[str, Any] | None,
+    selected_idx: list[int] | None = None,
+) -> dict[str, Any]:
     obj = load_prediction_file(prediction_path)
-    records = obj["records"][: len(rows)]
-    if len(records) != len(rows):
+    all_records = obj["records"][: len(rows)]
+    if len(all_records) != len(rows):
         raise ValueError(f"{prediction_path}: prediction record count does not match decision rows")
-    for row, record in zip(rows, records, strict=True):
+    for row, record in zip(rows, all_records, strict=True):
         if str(row.get("sample_id")) != str(record.get("sample_id")):
             raise ValueError(f"{prediction_path}: sample_id order does not match decision rows")
+
+    if selected_idx is None:
+        selected_idx = list(range(len(rows)))
+    selected = set(selected_idx)
+    rows = [rows[idx] for idx in selected_idx]
+    records = [all_records[idx] for idx in selected_idx]
 
     method = str(obj.get("summary", {}).get("method", Path(prediction_path).stem))
     expected = [str(row.get("correct_action", "")) for row in rows]
@@ -80,12 +93,21 @@ def diagnose(rows: list[dict[str, Any]], prediction_path: str, replay_summary: d
     predicted_flip_on_expected_flip = []
     correct_next_on_expected_flip = []
     correct_next_after_correct_prev_flip = []
+    divergent_trajectories = []
+    rejoin_after_first_divergence = []
+    final_correct_after_first_divergence = []
 
     for indices in groups.values():
         exp_seq = [expected[idx] for idx in indices]
         pred_seq = [predicted[idx] for idx in indices]
         seq_exact.append(exp_seq == pred_seq)
-        first_steps.append(first_divergence(exp_seq, pred_seq))
+        first = first_divergence(exp_seq, pred_seq)
+        first_steps.append(first)
+        if first < len(exp_seq):
+            divergent_trajectories.append(True)
+            suffix_matches = [exp == pred for exp, pred in zip(exp_seq[first + 1 :], pred_seq[first + 1 :], strict=True)]
+            rejoin_after_first_divergence.append(any(suffix_matches))
+            final_correct_after_first_divergence.append(exp_seq[-1] == pred_seq[-1])
 
         for left, right in zip(indices, indices[1:]):
             exp_pair = (expected[left], expected[right])
@@ -112,6 +134,9 @@ def diagnose(rows: list[dict[str, Any]], prediction_path: str, replay_summary: d
         "predicted_flip_rate_on_expected_flip": avg(predicted_flip_on_expected_flip),
         "next_action_accuracy_on_expected_flip": avg(correct_next_on_expected_flip),
         "next_action_accuracy_after_correct_prev_flip": avg(correct_next_after_correct_prev_flip),
+        "first_divergence_rejoin_rate": avg(rejoin_after_first_divergence),
+        "final_action_recovery_after_first_divergence": avg(final_correct_after_first_divergence),
+        "num_divergent_trajectories": len(divergent_trajectories),
         "mean_first_divergence_step": sum(first_steps) / max(1, len(first_steps)),
     }
     if replay_summary:
@@ -134,16 +159,21 @@ def pct(value: Any) -> str:
 def main() -> None:
     args = parse_args()
     rows = load_rows(args.decision_jsonl, args.max_samples)
+    selected_idx = None
+    split_metadata: dict[str, Any] = {}
+    if args.split_json:
+        _, val_idx, split_metadata = eval_protocol.load_split(args.split_json, len(rows))
+        selected_idx = [int(i) for i in val_idx.tolist()]
     replay_summaries = load_replay_summaries(args.replay_json)
     results = []
     for prediction_path in args.predictions:
         obj = load_prediction_file(prediction_path)
         method = str(obj.get("summary", {}).get("method", Path(prediction_path).stem))
-        results.append(diagnose(rows, prediction_path, replay_summaries.get(method)))
+        results.append(diagnose(rows, prediction_path, replay_summaries.get(method), selected_idx))
 
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps({"results": results}, indent=2, ensure_ascii=False), encoding="utf-8")
+    out.write_text(json.dumps({"metadata": {"split": split_metadata}, "results": results}, indent=2, ensure_ascii=False), encoding="utf-8")
 
     if args.markdown_out:
         md = Path(args.markdown_out)
@@ -152,19 +182,22 @@ def main() -> None:
             "# Sequence Policy Diagnostics",
             "",
             f"- decision states: `{args.decision_jsonl}`",
-            f"- samples: {len(rows)}",
+            f"- samples: {len(selected_idx) if selected_idx is not None else len(rows)}",
+            f"- split: `{split_metadata.get('split_unit', 'all')}`",
             "",
-            "| Method | Action Acc | Seq Exact | Transition Pair Exact | Next Acc On Expected Flip | Mean First Div Step | Tool Exec OK | DB Hash |",
-            "|---|---:|---:|---:|---:|---:|---:|---:|",
+            "| Method | Action Acc | Seq Exact | Transition Pair Exact | Branch Acc | First-Div Rejoin | Final Recovery | Mean First Div Step | Tool Exec OK | DB Hash |",
+            "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
         ]
         for item in results:
             lines.append(
-                "| {method} | {action} | {seq} | {trans} | {flip} | {first:.2f} | {exec_ok} | {db} |".format(
+                "| {method} | {action} | {seq} | {trans} | {flip} | {rejoin} | {recover} | {first:.2f} | {exec_ok} | {db} |".format(
                     method=item["method"],
                     action=pct(item["action_accuracy"]),
                     seq=pct(item["sequence_exact_match"]),
                     trans=pct(item["transition_pair_exact"]),
                     flip=pct(item["next_action_accuracy_on_expected_flip"]),
+                    rejoin=pct(item["first_divergence_rejoin_rate"]),
+                    recover=pct(item["final_action_recovery_after_first_divergence"]),
                     first=float(item["mean_first_divergence_step"]),
                     exec_ok=pct(item.get("tool_execution_ok_rate_predicted_tool")),
                     db=pct(item.get("db_hash_match_rate")),

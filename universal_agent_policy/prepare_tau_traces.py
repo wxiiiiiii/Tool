@@ -84,6 +84,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--action-vocab", choices=["coarse", "hierarchical"], default="coarse")
     parser.add_argument("--max-per-action", type=int, default=-1)
     parser.add_argument("--max-context-messages", type=int, default=14)
+    parser.add_argument(
+        "--context-mode",
+        choices=["full", "recent", "observation_only", "current_user_only"],
+        default="full",
+        help="Context ablation mode for hidden-state extraction experiments.",
+    )
     parser.add_argument("--max-message-chars", type=int, default=900)
     parser.add_argument("--max-system-chars", type=int, default=2500)
     return parser.parse_args()
@@ -231,12 +237,21 @@ def build_prompt(
     max_message_chars: int,
     max_system_chars: int,
     action_names: list[str],
+    context_mode: str,
 ) -> str:
     system = ""
-    if trajectory and trajectory[0].get("role") == "system":
+    if context_mode in {"full", "recent"} and trajectory and trajectory[0].get("role") == "system":
         system = shorten(trajectory[0].get("content", ""), max_system_chars)
-    start = max(1, idx - max_context_messages)
-    context = "\n".join(format_message(message, max_message_chars) for message in trajectory[start:idx])
+    if context_mode == "observation_only":
+        selected = [message for message in reversed(trajectory[:idx]) if message.get("role") == "tool"][:1]
+        selected = list(reversed(selected))
+    elif context_mode == "current_user_only":
+        selected = [message for message in reversed(trajectory[:idx]) if message.get("role") == "user"][:1]
+        selected = list(reversed(selected))
+    else:
+        start = max(1, idx - max_context_messages)
+        selected = trajectory[start:idx]
+    context = "\n".join(format_message(message, max_message_chars) for message in selected)
     return (
         "Predict the next universal agent policy action for a tau-bench customer-service agent.\n"
         f"Domain: {domain}\n"
@@ -254,6 +269,7 @@ def convert_trajectory(
     max_message_chars: int,
     max_system_chars: int,
     action_vocab: str,
+    context_mode: str,
 ) -> list[dict[str, Any]]:
     rows = []
     trajectory = item.get("traj", [])
@@ -279,11 +295,13 @@ def convert_trajectory(
                     max_message_chars,
                     max_system_chars,
                     action_names,
+                    context_mode,
                 ),
                 "correct_action": action_name,
                 "action_id": action_id,
                 "action_names": action_names,
                 "action_vocab": action_vocab,
+                "context_mode": context_mode,
                 "expected_tool_name": tool_name,
             }
         )
@@ -318,6 +336,7 @@ def main() -> None:
                     args.max_message_chars,
                     args.max_system_chars,
                     args.action_vocab,
+                    args.context_mode,
                 )
             )
 
@@ -337,6 +356,7 @@ def main() -> None:
                 "action_counts": dict(sorted(counts.items())),
                 "action_names": TAU_HIERARCHICAL_ACTION_NAMES if args.action_vocab == "hierarchical" else TAU_ACTION_NAMES,
                 "action_vocab": args.action_vocab,
+                "context_mode": args.context_mode,
             },
             indent=2,
             ensure_ascii=False,

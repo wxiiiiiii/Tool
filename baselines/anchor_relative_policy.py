@@ -10,8 +10,10 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
+from baselines import eval_protocol
+from baselines.tool_policy_utils import load_rows
 from universal_agent_policy.adapters import AdapterConfig, AdapterPolicy, PolicyHead, build_adapter
-from universal_agent_policy.data import load_hidden_tensor, split_indices
+from universal_agent_policy.data import load_hidden_tensor
 
 
 @dataclass
@@ -75,6 +77,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--source-tensor", required=True)
     parser.add_argument("--target-tensor", required=True)
     parser.add_argument("--source-policy", default=None, help="Optional source checkpoint for confidence/margin anchor selection.")
+    parser.add_argument("--decision-jsonl", help="Decision rows used for trajectory/task-disjoint split.")
     parser.add_argument("--out-dir", required=True)
     parser.add_argument(
         "--strategies",
@@ -117,6 +120,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--linear-lr", type=float, default=1e-2)
     parser.add_argument("--weight-decay", type=float, default=1e-3)
     parser.add_argument("--val-frac", type=float, default=0.15)
+    parser.add_argument("--split-unit", choices=["decision", "trajectory", "task"], default="trajectory")
+    parser.add_argument("--split-json", help="Load a precomputed split JSON.")
+    parser.add_argument("--write-split-json", help="Write the resolved train/val split for exact reuse.")
     parser.add_argument("--seed", type=int, default=13)
     parser.add_argument("--device", default="cpu")
     return parser.parse_args()
@@ -701,8 +707,14 @@ def evaluate_run(
     }
 
 
-def write_report(results: list[AnchorRunResult], out_dir: Path, source_tensor: str, target_tensor: str) -> None:
-    best = max(results, key=lambda r: (r.target_full_accuracy, r.source_target_agreement))
+def write_report(
+    results: list[AnchorRunResult],
+    out_dir: Path,
+    source_tensor: str,
+    target_tensor: str,
+    split_metadata: dict[str, Any],
+) -> None:
+    best = max(results, key=lambda r: (r.target_val_accuracy, r.source_target_val_agreement))
     rows = sorted(results, key=lambda r: (r.strategy, r.k, r.normalization))
     lines = [
         "# Anchor-Relative Policy Interface Results",
@@ -711,31 +723,34 @@ def write_report(results: list[AnchorRunResult], out_dir: Path, source_tensor: s
         "",
         f"- Source tensor: `{source_tensor}`",
         f"- Target tensor: `{target_tensor}`",
+        f"- Split: `{split_metadata.get('split_unit', 'unknown')}`",
+        f"- Train samples: {split_metadata.get('num_train_samples', 'unknown')}",
+        f"- Held-out samples: {split_metadata.get('num_val_samples', 'unknown')}",
         "- Target labels used: `0`",
         "- Target gradient steps: `0`",
         "- Source online queries during target onboarding: `0`",
         "",
         "## Best Run",
         "",
-        "| Strategy | K | Feature | Calibration | Normalization | Policy | Source Val Acc | Target Acc | Agreement | Transition Agreement |",
+        "| Strategy | K | Feature | Calibration | Normalization | Policy | Source Held-out Acc | Target Held-out Acc | Held-out Agreement | Transition Agreement |",
         "|---|---:|---|---|---|---|---:|---:|---:|---:|",
         (
             f"| {best.strategy} | {best.k} | {best.feature_mode} | {best.target_calibration} | "
             f"{best.normalization} | {best.policy_model} | "
-            f"{best.source_val_accuracy:.2%} | {best.target_full_accuracy:.2%} | {best.source_target_agreement:.2%} | "
+            f"{best.source_val_accuracy:.2%} | {best.target_val_accuracy:.2%} | {best.source_target_val_agreement:.2%} | "
             f"{best.source_target_transition_agreement:.2%} |"
         ),
         "",
         "## All Runs",
         "",
-        "| Strategy | K | Feature | Calibration | Norm | Source Val | Source Full | Target Full | Target Val | Agreement | Trans Acc | Trans Agreement |",
-        "|---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|",
+        "| Strategy | K | Feature | Calibration | Norm | Source Held-out | Target Held-out | Target Full Diagnostic | Held-out Agreement | Trans Acc | Trans Agreement |",
+        "|---|---:|---|---|---|---:|---:|---:|---:|---:|---:|",
     ]
     for r in rows:
         lines.append(
             f"| {r.strategy} | {r.k} | {r.feature_mode} | {r.target_calibration} | {r.normalization} | {r.source_val_accuracy:.2%} | "
-            f"{r.source_full_accuracy:.2%} | {r.target_full_accuracy:.2%} | "
-            f"{r.target_val_accuracy:.2%} | {r.source_target_agreement:.2%} | "
+            f"{r.target_val_accuracy:.2%} | {r.target_full_accuracy:.2%} | "
+            f"{r.source_target_val_agreement:.2%} | "
             f"{r.target_transition_accuracy:.2%} | {r.source_target_transition_agreement:.2%} |"
         )
     (out_dir / "anchor_relative_policy_results.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -748,14 +763,27 @@ def main() -> None:
     source = load_hidden_tensor(args.source_tensor)
     target = load_hidden_tensor(args.target_tensor)
     validate_target_alignment(source, target)
+    rows = load_rows(args.decision_jsonl) if args.decision_jsonl else []
 
     labels = source["y"]
     if not torch.equal(labels, target["y"]):
         raise ValueError("source and target labels differ; paired target evaluation would be ambiguous")
-    train_idx, val_idx = split_indices(len(labels), args.val_frac, args.seed)
+    if args.split_json:
+        train_idx, val_idx, split_metadata = eval_protocol.load_split(args.split_json, len(labels))
+    else:
+        train_idx, val_idx, split_metadata = eval_protocol.split_indices_for_protocol(
+            len(labels), args.val_frac, args.seed, rows, args.split_unit
+        )
+    if args.write_split_json:
+        eval_protocol.save_split(args.write_split_json, train_idx, val_idx, split_metadata)
     num_actions = int(labels.max().item()) + 1
     source_logits = load_source_logits(args.source_policy, source["h"], num_actions, device)
-    transition_pairs = build_transition_pairs_from_tensor(source)
+    val_set = {int(i) for i in val_idx.tolist()}
+    transition_pairs = (
+        eval_protocol.transition_pairs(rows, val_idx)
+        if rows and len(rows) == len(labels)
+        else [(left, right) for left, right in build_transition_pairs_from_tensor(source) if left in val_set and right in val_set]
+    )
 
     out_dir = Path(args.out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -802,7 +830,7 @@ def main() -> None:
                             **metrics,
                         )
                         results.append(result)
-                        score = result.target_full_accuracy + 0.1 * result.source_target_agreement + 0.05 * result.source_target_transition_agreement
+                        score = result.target_val_accuracy + 0.1 * result.source_target_val_agreement + 0.05 * result.source_target_transition_agreement
                         if score > best_score:
                             best_score = score
                             best_payload = {
@@ -819,6 +847,7 @@ def main() -> None:
             "source_policy": args.source_policy,
             "seed": args.seed,
             "val_frac": args.val_frac,
+            "split": split_metadata,
             "policy_model": args.policy_model,
             "hidden_dim": args.hidden_dim,
             "feature_modes": args.feature_modes,
@@ -832,8 +861,8 @@ def main() -> None:
     (out_dir / "anchor_relative_policy_results.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     if best_payload is not None:
         torch.save(best_payload, out_dir / "best_anchor_relative_policy.pt")
-    write_report(results, out_dir, args.source_tensor, args.target_tensor)
-    best = max(results, key=lambda r: (r.target_full_accuracy, r.source_target_agreement))
+    write_report(results, out_dir, args.source_tensor, args.target_tensor, split_metadata)
+    best = max(results, key=lambda r: (r.target_val_accuracy, r.source_target_val_agreement))
     print(json.dumps(asdict(best), indent=2))
 
 

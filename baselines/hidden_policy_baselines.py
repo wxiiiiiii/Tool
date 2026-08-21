@@ -13,9 +13,10 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader, TensorDataset
 
+from baselines import eval_protocol
 from baselines.tool_policy_utils import prediction_records, save_json
 from universal_agent_policy.adapters import AdapterConfig, AdapterPolicy, PolicyHead, build_adapter
-from universal_agent_policy.data import load_hidden_tensor, split_indices
+from universal_agent_policy.data import load_hidden_tensor
 from universal_agent_policy.runtime.tau_grounding import row_context_text
 
 
@@ -49,6 +50,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--state-dynamic-min-count", type=int, default=4)
     parser.add_argument("--save-predictions", action="store_true")
     parser.add_argument("--val-frac", type=float, default=0.15)
+    parser.add_argument(
+        "--split-unit",
+        choices=["decision", "trajectory", "task"],
+        default="trajectory",
+        help="Held-out protocol. Use trajectory/task to avoid train/val turns from the same tau-bench trajectory/task.",
+    )
+    parser.add_argument("--split-json", help="Load a precomputed split JSON produced by --write-split-json.")
+    parser.add_argument("--write-split-json", help="Write the resolved train/val split for exact reuse.")
     parser.add_argument("--seed", type=int, default=13)
     parser.add_argument("--device", default="cpu")
     return parser.parse_args()
@@ -229,22 +238,54 @@ class UnlockLowRankInterventionPolicy(nn.Module):
         return logits + self.intervention_alpha * direction_logits
 
 
+class UnlockMappedDirectionPolicy(nn.Module):
+    """Paper-faithful direction-transfer baseline: align latent space, then score action directions only."""
+
+    def __init__(
+        self,
+        coef: torch.Tensor,
+        center: torch.Tensor,
+        directions: torch.Tensor,
+        bias: torch.Tensor,
+        logit_scale: float,
+    ) -> None:
+        super().__init__()
+        self.projection = RidgeProjection(coef)
+        self.register_buffer("center", center.float())
+        self.register_buffer("directions", directions.float())
+        self.register_buffer("bias", bias.float())
+        self.logit_scale = float(logit_scale)
+
+    def forward(self, h: torch.Tensor) -> torch.Tensor:
+        z = self.projection(h)
+        centered = torch.nn.functional.normalize(z - self.center.to(z.device), dim=-1)
+        return self.logit_scale * (centered @ self.directions.to(z.device).T) + self.bias.to(z.device)
+
+
 def metrics_from_logits(
     logits: torch.Tensor,
     labels: torch.Tensor,
     source_pred: torch.Tensor,
     val_idx: torch.Tensor,
     action_names: list[str] | None,
+    rows: list[dict[str, Any]] | None = None,
+    num_actions: int | None = None,
 ) -> dict[str, float]:
     pred = logits.argmax(dim=-1)
     all_idx = torch.arange(labels.shape[0])
-    return {
-        "accuracy_full": accuracy_on_indices(pred, labels, all_idx),
-        "accuracy_val": accuracy_on_indices(pred, labels, val_idx),
-        "policy_consistency_full": accuracy_on_indices(pred, source_pred, all_idx),
-        "policy_consistency_val": accuracy_on_indices(pred, source_pred, val_idx),
+    resolved_num_actions = int(num_actions or int(labels.max().item()) + 1)
+    metrics = {
+        "accuracy_full": eval_protocol.accuracy_on_indices(pred, labels, all_idx),
+        "accuracy_val": eval_protocol.accuracy_on_indices(pred, labels, val_idx),
+        "heldout_action_accuracy": eval_protocol.accuracy_on_indices(pred, labels, val_idx),
+        "macro_action_accuracy_val": eval_protocol.macro_action_accuracy(pred, labels, val_idx, resolved_num_actions),
+        "policy_consistency_full": eval_protocol.accuracy_on_indices(pred, source_pred, all_idx),
+        "policy_consistency_val": eval_protocol.accuracy_on_indices(pred, source_pred, val_idx),
         "tool_action_accuracy_val": tool_accuracy(pred, labels, val_idx, action_names),
     }
+    if rows:
+        metrics["transition_state_accuracy_val"] = eval_protocol.transition_state_accuracy(pred, labels, rows, val_idx)
+    return metrics
 
 
 def predictions_from_logits(logits: torch.Tensor, action_names: list[str] | None) -> list[str]:
@@ -540,11 +581,6 @@ def apply_state_conditioned_dynamic_transition_prior(
     }
 
 
-def accuracy_on_indices(pred: torch.Tensor, labels: torch.Tensor, idx: torch.Tensor) -> float:
-    idx = idx.cpu()
-    return float((pred[idx].cpu() == labels[idx].cpu()).float().mean().item())
-
-
 def tool_accuracy(pred: torch.Tensor, labels: torch.Tensor, idx: torch.Tensor, action_names: list[str] | None) -> float:
     if not action_names:
         return float("nan")
@@ -725,12 +761,13 @@ def evaluate_frozen_adapter(
     action_names: list[str] | None,
     device: torch.device,
     batch_size: int,
+    rows: list[dict[str, Any]] | None = None,
     extra: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     started = time.perf_counter()
     model = FrozenHeadModel(adapter, source.head.cpu()).to(device)
     logits = batched_logits(model, target_h, device, batch_size)
-    metrics = metrics_from_logits(logits, labels, source_pred, val_idx, action_names)
+    metrics = metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows, source.num_actions)
     result = {
         "method": name,
         "family": "frozen_source_head",
@@ -753,6 +790,7 @@ def evaluate_probe(
     action_names: list[str] | None,
     device: torch.device,
     batch_size: int,
+    rows: list[dict[str, Any]] | None,
     train_seconds: float,
 ) -> dict[str, Any]:
     started = time.perf_counter()
@@ -765,7 +803,7 @@ def evaluate_probe(
         "trained_params": count_parameters(probe),
         "train_seconds": train_seconds,
         "eval_seconds": time.perf_counter() - started,
-        **metrics_from_logits(logits, labels, source_pred, val_idx, action_names),
+        **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows),
     }
 
 
@@ -779,6 +817,7 @@ def evaluate_direct_policy(
     action_names: list[str] | None,
     device: torch.device,
     batch_size: int,
+    rows: list[dict[str, Any]] | None = None,
     extra: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     started = time.perf_counter()
@@ -790,7 +829,7 @@ def evaluate_direct_policy(
         "adapter_params": 0,
         "trained_params": 0,
         "eval_seconds": time.perf_counter() - started,
-        **metrics_from_logits(logits, labels, source_pred, val_idx, action_names),
+        **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows),
     }
     if extra:
         result.update(extra)
@@ -811,6 +850,7 @@ def expand_methods(methods: list[str]) -> set[str]:
             "fixed_projection",
             "random_projection",
             "pairwise_linear_ridge",
+            "faithful_unlock_direction",
             "unlock_pure_vector",
             "unlock_lowrank_subspace",
             "unlock_lowrank_intervention",
@@ -842,7 +882,14 @@ def main() -> None:
 
     source = load_source_parts(args.source_policy, device)
     labels = target_obj["y"].long()
-    train_idx, val_idx = split_indices(len(labels), args.val_frac, args.seed)
+    if args.split_json:
+        train_idx, val_idx, split_metadata = eval_protocol.load_split(args.split_json, len(labels))
+    else:
+        train_idx, val_idx, split_metadata = eval_protocol.split_indices_for_protocol(
+            len(labels), args.val_frac, args.seed, rows, args.split_unit
+        )
+    if args.write_split_json:
+        eval_protocol.save_split(args.write_split_json, train_idx, val_idx, split_metadata)
     action_names = action_names_from_obj(target_obj, rows) or source.action_names
 
     source_logits = batched_logits(source.model, source_obj["h"], device, args.batch_size)
@@ -865,6 +912,7 @@ def main() -> None:
                 action_names,
                 device,
                 args.batch_size,
+                rows,
                 {"training_signal": "none", "trained_params": 0},
             )
         )
@@ -884,6 +932,7 @@ def main() -> None:
                 action_names,
                 device,
                 args.batch_size,
+                rows,
                 {"training_signal": "none", "trained_params": 0},
             )
         )
@@ -904,6 +953,7 @@ def main() -> None:
                 action_names,
                 device,
                 args.batch_size,
+                rows,
                 {
                     "training_signal": "paired_source_latents",
                     "trained_params": int(coef.numel()),
@@ -916,6 +966,7 @@ def main() -> None:
 
     if (
         "unlock_lowrank_subspace" in selected
+        or "faithful_unlock_direction" in selected
         or "unlock_lowrank_intervention" in selected
         or "unlock_lowrank_dynamic" in selected
         or "unlock_lowrank_selective_dynamic" in selected
@@ -946,6 +997,41 @@ def main() -> None:
             "stored_direction_params": int(center.numel() + directions.numel() + bias.numel()),
             **direction_meta,
         }
+        if "faithful_unlock_direction" in selected:
+            model = UnlockMappedDirectionPolicy(
+                lowrank_coef,
+                center,
+                directions,
+                bias,
+                args.unlock_vector_logit_scale,
+            )
+            logits = batched_logits(model.to(device), target_obj["h"], device, args.batch_size)
+            direction_extra = {
+                **base_extra,
+                "training_signal": "source_capability_directions_plus_lowrank_subspace_transfer",
+                "intervention_alpha": None,
+                "unlock_interpretation": "single_or_few_capability_direction_transfer",
+            }
+            results.append(
+                {
+                    "method": "faithful_unlock_direction",
+                    "family": "faithful_unlock_direction_transfer",
+                    "adapter_params": 0,
+                    "trained_params": int(lowrank_coef.numel()),
+                    "eval_seconds": 0.0,
+                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows, source.num_actions),
+                    **direction_extra,
+                }
+            )
+            save_predictions_if_requested(
+                args.save_predictions,
+                rows,
+                logits,
+                action_names,
+                out_dir,
+                "faithful_unlock_direction",
+                direction_extra,
+            )
         if "unlock_lowrank_subspace" in selected:
             model = UnlockLowRankInterventionPolicy(
                 lowrank_coef,
@@ -964,7 +1050,7 @@ def main() -> None:
                     "adapter_params": 0,
                     "trained_params": int(lowrank_coef.numel()),
                     "eval_seconds": 0.0,
-                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names),
+                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows, source.num_actions),
                     **base_extra,
                     "intervention_alpha": 0.0,
                 }
@@ -996,7 +1082,7 @@ def main() -> None:
                     "adapter_params": 0,
                     "trained_params": int(lowrank_coef.numel()),
                     "eval_seconds": 0.0,
-                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names),
+                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows, source.num_actions),
                     **base_extra,
                     "training_signal": "paired_source_latents_lowrank_closed_form_plus_action_direction_intervention",
                     "intervention_alpha": args.unlock_intervention_alpha,
@@ -1050,7 +1136,7 @@ def main() -> None:
                     "adapter_params": 0,
                     "trained_params": int(lowrank_coef.numel()),
                     "eval_seconds": 0.0,
-                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names),
+                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows, source.num_actions),
                     **dynamic_extra,
                 }
             )
@@ -1108,7 +1194,7 @@ def main() -> None:
                     "adapter_params": 0,
                     "trained_params": int(lowrank_coef.numel()),
                     "eval_seconds": 0.0,
-                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names),
+                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows, source.num_actions),
                     **dynamic_extra,
                 }
             )
@@ -1178,7 +1264,7 @@ def main() -> None:
                     "adapter_params": 0,
                     "trained_params": int(lowrank_coef.numel()),
                     "eval_seconds": 0.0,
-                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names),
+                    **metrics_from_logits(logits, labels, source_pred, val_idx, action_names, rows, source.num_actions),
                     **dynamic_extra,
                 }
             )
@@ -1226,6 +1312,7 @@ def main() -> None:
             action_names,
             device,
             args.batch_size,
+            rows,
             {
                 "training_signal": "source_policy_pseudo_labels_contrastive_directions",
                 "train_seconds": time.perf_counter() - started,
@@ -1293,6 +1380,7 @@ def main() -> None:
                 action_names,
                 device,
                 args.batch_size,
+                rows,
                 {
                     "training_signal": "paired_source_latents_mse",
                     "train_seconds": train_seconds,
@@ -1334,6 +1422,7 @@ def main() -> None:
             action_names,
             device,
             args.batch_size,
+            rows,
             time.perf_counter() - started,
         )
         result["best_val_accuracy"] = best_val
@@ -1355,19 +1444,24 @@ def main() -> None:
                 action_names,
                 device,
                 args.batch_size,
+                rows,
                 {"training_signal": "target_labels_ce_frozen_source_head"},
             )
         )
 
-    source_metrics = metrics_from_logits(source_logits, labels, source_pred, val_idx, action_names)
+    source_metrics = metrics_from_logits(source_logits, labels, source_pred, val_idx, action_names, rows, source.num_actions)
     metadata = {
         "num_samples": int(labels.shape[0]),
         "num_actions": source.num_actions,
         "val_frac": args.val_frac,
         "seed": args.seed,
+        "split": split_metadata,
         "source_policy_on_source": {
             "accuracy_full": source_metrics["accuracy_full"],
             "accuracy_val": source_metrics["accuracy_val"],
+            "heldout_action_accuracy": source_metrics["heldout_action_accuracy"],
+            "macro_action_accuracy_val": source_metrics["macro_action_accuracy_val"],
+            "transition_state_accuracy_val": source_metrics.get("transition_state_accuracy_val"),
             "tool_action_accuracy_val": source_metrics["tool_action_accuracy_val"],
         },
     }
@@ -1379,21 +1473,27 @@ def main() -> None:
 
 def render_markdown(payload: dict[str, Any]) -> str:
     metadata = payload["metadata"]
+    split = metadata.get("split", {})
     lines = [
         "# Hidden Policy Baseline Results",
         "",
         f"- samples: {metadata['num_samples']}",
         f"- actions: {metadata['num_actions']}",
+        f"- split: `{split.get('split_unit', 'unknown')}`",
         f"- validation split seed: {metadata['seed']}",
+        f"- train samples: {split.get('num_train_samples', 'unknown')}",
+        f"- held-out samples: {split.get('num_val_samples', 'unknown')}",
         "",
-        "| Method | Val Action Acc | Val Policy Consistency | Val Tool Action Acc | Trained Params | Training Signal |",
-        "|---|---:|---:|---:|---:|---|",
+        "| Method | Held-out Action Acc | Macro Action Acc | Transition Acc | Policy Consistency | Tool Action Acc | Trainable/Fit Params | Training Signal |",
+        "|---|---:|---:|---:|---:|---:|---:|---|",
     ]
-    for row in sorted(payload["results"], key=lambda item: item.get("accuracy_val", 0.0), reverse=True):
+    for row in sorted(payload["results"], key=lambda item: item.get("heldout_action_accuracy", item.get("accuracy_val", 0.0)), reverse=True):
         lines.append(
-            "| {method} | {acc:.2%} | {cons:.2%} | {tool:.2%} | {params} | {signal} |".format(
+            "| {method} | {acc:.2%} | {macro:.2%} | {trans:.2%} | {cons:.2%} | {tool:.2%} | {params} | {signal} |".format(
                 method=row["method"],
-                acc=row.get("accuracy_val", float("nan")),
+                acc=row.get("heldout_action_accuracy", row.get("accuracy_val", float("nan"))),
+                macro=row.get("macro_action_accuracy_val", float("nan")),
+                trans=row.get("transition_state_accuracy_val", float("nan")),
                 cons=row.get("policy_consistency_val", float("nan")),
                 tool=row.get("tool_action_accuracy_val", float("nan")),
                 params=row.get("trained_params", 0),
