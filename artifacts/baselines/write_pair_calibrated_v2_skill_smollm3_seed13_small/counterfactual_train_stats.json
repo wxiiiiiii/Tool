@@ -1,0 +1,51 @@
+{
+  "source_response_stats": {
+    "branch_acc_all": 0.75625,
+    "branch_acc_write": 0.78125,
+    "write_success_branch_acc": 0.1875,
+    "write_failure_branch_acc": 1.0,
+    "success_failure_pair_acc": 0.1375,
+    "write_success_failure_pair_acc": 0.1875,
+    "unique_action_prefix_rate": 0.2875,
+    "unique_action_write_prefix_rate": 0.3125,
+    "action_distribution_by_observation": {
+      "success": {
+        "ASK_USER": 68,
+        "ACT_RETRIEVE_USER": 8,
+        "ANSWER": 4
+      },
+      "failure": {
+        "ASK_USER": 58,
+        "ACT_RETRIEVE_USER": 22
+      },
+      "empty": {
+        "ASK_USER": 70,
+        "ACT_RETRIEVE_USER": 10
+      },
+      "conflict": {
+        "ASK_USER": 71,
+        "ACT_RETRIEVE_USER": 9
+      }
+    },
+    "mean_source_response_norm": 1.0056400299072266
+  },
+  "skill_counts": {
+    "0": 10,
+    "1": 9,
+    "2": 8,
+    "3": 8,
+    "4": 12,
+    "5": 4,
+    "6": 14,
+    "7": 15
+  },
+  "write_pair_critical_stats": {
+    "num_total_prefixes": 80.0,
+    "num_write_prefixes": 16.0,
+    "num_write_pair_critical_prefixes": 8.0,
+    "write_pair_critical_rate": 0.10000000149011612,
+    "write_source_flip_rate": 0.375,
+    "write_pair_strength_abs_top_quantile_threshold": 0.7885487079620361,
+    "mean_write_pair_strength": 0.4807750880718231
+  }
+}

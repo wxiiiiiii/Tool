@@ -134,6 +134,8 @@ def historical_tool_call_map(paths: list[str]) -> dict[str, list[dict[str, Any]]
         domain = domain_from_path(path)
         with Path(path).open("r", encoding="utf-8") as handle:
             trajectories = json.load(handle)
+        if isinstance(trajectories, dict) and isinstance(trajectories.get("records"), list):
+            trajectories = trajectories["records"]
         for item in trajectories:
             task_id = item.get("task_id")
             trial = item.get("trial", 0)

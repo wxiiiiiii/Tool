@@ -1,0 +1,1180 @@
+{
+  "metadata": {
+    "num_train_prefixes": 80,
+    "num_eval_prefixes": 80,
+    "num_observation_bank_entries": 160,
+    "num_skills": 8,
+    "skill_dim": 32,
+    "response_rank": 8,
+    "binder_rank": 32,
+    "alpha": 1.0,
+    "critical_impact_threshold": 0.5,
+    "branch_margin_threshold": 0.5,
+    "critical_top_quantile": 0.75,
+    "write_pair_top_quantile": 0.8,
+    "write_branch_strength": 12.0,
+    "write_pair_calibration_margin": 1.0,
+    "write_pair_max_calibration": 8.0,
+    "branch_aux_weight": 0.05,
+    "obs_variants": 3,
+    "fingerprint": "mean_ref",
+    "split_metadata": {
+      "split_unit": "task",
+      "seed": 13,
+      "val_frac": 0.15,
+      "num_groups": 129,
+      "num_train_groups": 110,
+      "num_val_groups": 19,
+      "num_train_samples": 3996,
+      "num_val_samples": 619,
+      "decision_jsonl": "artifacts/tau/tau_success_policy_traces_hier_v2.jsonl"
+    },
+    "source_model_id": "Qwen/Qwen3-4B",
+    "target_model_id": "HuggingFaceTB/SmolLM3-3B"
+  },
+  "source_response_stats": {
+    "branch_acc_all": 0.734375,
+    "branch_acc_write": 0.734375,
+    "write_success_branch_acc": 0.125,
+    "write_failure_branch_acc": 0.9375,
+    "success_failure_pair_acc": 0.025,
+    "write_success_failure_pair_acc": 0.0625,
+    "unique_action_prefix_rate": 0.2,
+    "unique_action_write_prefix_rate": 0.1875,
+    "action_distribution_by_observation": {
+      "success": {
+        "ASK_USER": 77,
+        "ANSWER": 2,
+        "ACT_RETRIEVE_USER": 1
+      },
+      "failure": {
+        "ASK_USER": 68,
+        "ACT_RETRIEVE_USER": 11,
+        "ANSWER": 1
+      },
+      "empty": {
+        "ASK_USER": 69,
+        "ACT_RETRIEVE_USER": 8,
+        "ANSWER": 3
+      },
+      "conflict": {
+        "ASK_USER": 76,
+        "ACT_RETRIEVE_USER": 3,
+        "ANSWER": 1
+      }
+    },
+    "mean_source_response_norm": 1.0208426713943481,
+    "method": "Source Counterfactual Response",
+    "correct_flip_rate": 0.24375,
+    "harmful_flip_rate": 0.196875,
+    "write_correct_flip_rate": 0.28125,
+    "write_harmful_flip_rate": 0.046875
+  },
+  "diagnostics": {
+    "pre_observation_skill_binder": {
+      "skill_binder_accuracy": 0.30000001192092896,
+      "skill_posterior_entropy": 1.986035943031311,
+      "top1_skill_confidence": 0.22284682095050812
+    },
+    "prototype_skill_binder": {
+      "skill_binder_accuracy": 0.3375000059604645,
+      "skill_posterior_entropy": 2.063777446746826,
+      "top1_skill_confidence": 0.15852102637290955
+    },
+    "ridge_skill_binder": {
+      "skill_binder_accuracy": 0.4000000059604645,
+      "skill_posterior_entropy": 2.0548746585845947,
+      "top1_skill_confidence": 0.17701122164726257
+    },
+    "response_signal_localization": {
+      "eval_source_delta_h_norm": 15.532206535339355,
+      "eval_source_delta_z_norm": 0.1521899402141571,
+      "eval_source_delta_logit_norm": 0.995451807975769,
+      "eval_target_delta_h_norm": 6.440390110015869,
+      "eval_target_delta_z_norm": 0.20568236708641052,
+      "eval_target_delta_logit_norm": 1.6833873987197876,
+      "eval_source_success_failure_cosine_distance_h": 0.006384683307260275,
+      "eval_source_success_failure_cosine_distance_z": 0.016007907688617706,
+      "eval_source_success_failure_cosine_distance_logits": 0.009684095159173012,
+      "eval_target_success_failure_cosine_distance_h": 0.01660727895796299,
+      "eval_target_success_failure_cosine_distance_z": 0.024687912315130234,
+      "eval_target_success_failure_cosine_distance_logits": 0.01412956602871418,
+      "eval_source_counterfactual_top1_flip_rate": 0.20000000298023224,
+      "eval_target_counterfactual_top1_flip_rate": 0.0,
+      "eval_source_branch_flip_rate": 0.20000000298023224,
+      "eval_target_branch_flip_rate": 0.0
+    },
+    "source_validated_branch_critical_train": {
+      "num_total_prefixes": 80.0,
+      "num_source_validated_critical_prefixes": 43.0,
+      "critical_prefix_rate": 0.5375000238418579,
+      "source_branch_flip_rate": 0.30000001192092896,
+      "target_branch_flip_rate": 0.25,
+      "source_branch_margin_delta": 0.4297197759151459,
+      "target_branch_margin_delta": 3.4727084636688232,
+      "source_branch_margin_abs_top_quantile_threshold": 0.7547440528869629
+    },
+    "source_validated_branch_critical_eval": {
+      "num_total_prefixes": 80.0,
+      "num_source_validated_critical_prefixes": 39.0,
+      "critical_prefix_rate": 0.48750001192092896,
+      "source_branch_flip_rate": 0.25,
+      "target_branch_flip_rate": 0.15000000596046448,
+      "source_branch_margin_delta": 0.3723028302192688,
+      "target_branch_margin_delta": 3.8657469749450684,
+      "source_branch_margin_abs_top_quantile_threshold": 0.6708686947822571
+    },
+    "write_pair_critical_train": {
+      "num_total_prefixes": 80.0,
+      "num_write_prefixes": 16.0,
+      "num_write_pair_critical_prefixes": 8.0,
+      "write_pair_critical_rate": 0.10000000149011612,
+      "write_source_flip_rate": 0.375,
+      "write_pair_strength_abs_top_quantile_threshold": 0.7885487079620361,
+      "mean_write_pair_strength": 0.4807750880718231
+    },
+    "write_pair_critical_eval": {
+      "num_total_prefixes": 80.0,
+      "num_write_prefixes": 16.0,
+      "num_write_pair_critical_prefixes": 8.0,
+      "write_pair_critical_rate": 0.10000000149011612,
+      "write_source_flip_rate": 0.3125,
+      "write_pair_strength_abs_top_quantile_threshold": 0.3830854892730713,
+      "mean_write_pair_strength": 0.2754163444042206
+    },
+    "branch_direction_and_scale": {
+      "branch_direction_correct_rate": 0.965625,
+      "median_branch_flip_scale": 0.0,
+      "flippable_branch_alpha_1": 0.9514563083648682,
+      "flippable_branch_alpha_2": 0.9514563083648682,
+      "flippable_branch_alpha_5": 0.9514563083648682
+    },
+    "oracle_source_branch_response": {
+      "mean_source_delta_norm": 0.5466786026954651,
+      "mean_target_delta_norm": 0.8361173868179321,
+      "mean_true_gap_norm": 0.9497246742248535,
+      "mean_pred_gap_norm": 0.6420425176620483,
+      "gap_cosine": 0.08266904950141907,
+      "argmax_flip_rate": 0.0,
+      "correct_flip_rate": 0.0,
+      "harmful_flip_rate": 0.0
+    },
+    "oracle_skill_branch_operator": {
+      "mean_source_delta_norm": 0.5466786026954651,
+      "mean_target_delta_norm": 0.8361173868179321,
+      "mean_true_gap_norm": 0.9497246742248535,
+      "mean_pred_gap_norm": 1.2520837783813477,
+      "gap_cosine": 0.01803908869624138,
+      "argmax_flip_rate": 0.0,
+      "correct_flip_rate": 0.0,
+      "harmful_flip_rate": 0.0
+    },
+    "predicted_skill_branch_operator": {
+      "mean_source_delta_norm": 0.5466786026954651,
+      "mean_target_delta_norm": 0.8361173868179321,
+      "mean_true_gap_norm": 0.9497246742248535,
+      "mean_pred_gap_norm": 1.251295804977417,
+      "gap_cosine": 0.021992962807416916,
+      "argmax_flip_rate": 0.0,
+      "correct_flip_rate": 0.0,
+      "harmful_flip_rate": 0.0
+    },
+    "branch_first_decoder": {
+      "Oracle Correct Write Branch + Soft Hierarchical": {
+        "branch_selection_accuracy": 0.76875,
+        "branch_correct_flip_rate": 0.08125,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 232,
+          "verify": 72,
+          "finish": 16
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Calibrated Write-Pair Prior + Soft Hierarchical": {
+        "branch_selection_accuracy": 0.728125,
+        "branch_correct_flip_rate": 0.040625,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 248,
+          "verify": 69,
+          "finish": 3
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Oracle Source Branch Response + Broadcast": {
+        "branch_selection_accuracy": 0.6875,
+        "branch_correct_flip_rate": 0.0,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 320
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Oracle Source Branch Response + Hard Branch-First": {
+        "branch_selection_accuracy": 0.784375,
+        "branch_correct_flip_rate": 0.096875,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 237,
+          "verify": 83
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Oracle Source Branch Response + Soft Hierarchical": {
+        "branch_selection_accuracy": 0.7875,
+        "branch_correct_flip_rate": 0.103125,
+        "branch_harmful_flip_rate": 0.003125,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 224,
+          "verify": 95,
+          "recover": 1
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Oracle Skill + Branch Operator + Broadcast": {
+        "branch_selection_accuracy": 0.6875,
+        "branch_correct_flip_rate": 0.0,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 320
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Oracle Skill + Branch Operator + Hard Branch-First": {
+        "branch_selection_accuracy": 0.725,
+        "branch_correct_flip_rate": 0.0375,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 256,
+          "verify": 64
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Oracle Skill + Branch Operator + Soft Hierarchical": {
+        "branch_selection_accuracy": 0.734375,
+        "branch_correct_flip_rate": 0.046875,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 244,
+          "verify": 76
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Predicted Skill + Branch Operator + Broadcast": {
+        "branch_selection_accuracy": 0.6875,
+        "branch_correct_flip_rate": 0.0,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 320
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Predicted Skill + Branch Operator + Hard Branch-First": {
+        "branch_selection_accuracy": 0.725,
+        "branch_correct_flip_rate": 0.0375,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 259,
+          "verify": 61
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Predicted Skill + Branch Operator + Soft Hierarchical": {
+        "branch_selection_accuracy": 0.734375,
+        "branch_correct_flip_rate": 0.046875,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 238,
+          "verify": 82
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Oracle Skill + Pair-Contrastive Write Operator": {
+        "branch_selection_accuracy": 0.71875,
+        "branch_correct_flip_rate": 0.03125,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 253,
+          "verify": 67
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Predicted Skill MLP + Pair-Contrastive Write Operator": {
+        "branch_selection_accuracy": 0.71875,
+        "branch_correct_flip_rate": 0.03125,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 252,
+          "verify": 68
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Prototype Binder + Pair-Contrastive Write Operator": {
+        "branch_selection_accuracy": 0.71875,
+        "branch_correct_flip_rate": 0.03125,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 252,
+          "verify": 68
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Ridge Binder + Pair-Contrastive Write Operator": {
+        "branch_selection_accuracy": 0.71875,
+        "branch_correct_flip_rate": 0.03125,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 252,
+          "verify": 68
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      },
+      "Predicted Pair Operator + Calibrated Write-Pair Prior": {
+        "branch_selection_accuracy": 0.7625,
+        "branch_correct_flip_rate": 0.075,
+        "branch_harmful_flip_rate": 0.0,
+        "within_branch_static_top1_match": 1.0,
+        "primitive_correct_flip_given_branch_correct": 1.0,
+        "static_branch_distribution": {
+          "acquire": 320
+        },
+        "corrected_branch_distribution": {
+          "acquire": 243,
+          "verify": 63,
+          "finish": 14
+        },
+        "oracle_branch_distribution": {
+          "acquire": 220,
+          "recover": 80,
+          "finish": 20
+        }
+      }
+    },
+    "required_fields": {
+      "source_write_pair": 0.0625,
+      "source_unique_action_prefix": 0.2,
+      "source_delta_h_norm": 15.532206535339355,
+      "source_delta_z_norm": 0.1521899402141571,
+      "source_delta_logit_norm": 0.995451807975769,
+      "target_delta_h_norm": 6.440390110015869,
+      "target_delta_z_norm": 0.20568236708641052,
+      "target_delta_logit_norm": 1.6833873987197876,
+      "num_total_prefixes": 80,
+      "num_source_validated_critical_prefixes": 39,
+      "critical_prefix_rate": 0.48750001192092896,
+      "source_branch_flip_rate": 0.25,
+      "target_branch_flip_rate": 0.15000000596046448,
+      "source_branch_margin_delta": 0.3723028302192688,
+      "target_branch_margin_delta": 3.8657469749450684,
+      "branch_direction_correct_rate": 0.965625,
+      "median_branch_flip_scale": 0.0,
+      "flippable_branch_alpha_1": 0.9514563083648682,
+      "flippable_branch_alpha_2": 0.9514563083648682,
+      "flippable_branch_alpha_5": 0.9514563083648682,
+      "binder_accuracy": 0.30000001192092896,
+      "binder_entropy": 1.986035943031311,
+      "binder_confidence": 0.22284682095050812,
+      "prototype_binder_accuracy": 0.3375000059604645,
+      "ridge_binder_accuracy": 0.4000000059604645,
+      "oracle_source_branch_flip_rate": 0.0,
+      "oracle_source_branch_correct_flip_rate": 0.0,
+      "oracle_source_branch_harmful_flip_rate": 0.0,
+      "train_critical_prefix_count": 43,
+      "eval_critical_prefix_count": 39,
+      "train_write_pair_critical_prefix_count": 8,
+      "eval_write_pair_critical_prefix_count": 8,
+      "oracle_correct_write_branch_write_pair": 1.0,
+      "calibrated_write_pair_prior_write_pair": 0.1875,
+      "oracle_skill_operator_write_pair": 0.0,
+      "predicted_skill_operator_write_pair": 0.0,
+      "oracle_pair_operator_write_pair": 0.0,
+      "predicted_pair_operator_write_pair": 0.0,
+      "predicted_pair_plus_calibrated_prior_write_pair": 0.875
+    },
+    "critical_skill_cluster_stats": {
+      "critical_prefix_count": 43,
+      "critical_fraction": 0.5375000238418579,
+      "train_skill_counts": {
+        "0": 10,
+        "1": 9,
+        "2": 8,
+        "3": 8,
+        "4": 12,
+        "5": 4,
+        "6": 14,
+        "7": 15
+      },
+      "critical_skill_counts": {
+        "0": 6,
+        "1": 6,
+        "2": 4,
+        "3": 4,
+        "4": 6,
+        "5": 1,
+        "6": 9,
+        "7": 7
+      }
+    }
+  },
+  "results": [
+    {
+      "branch_acc_all": 0.734375,
+      "branch_acc_write": 0.734375,
+      "write_success_branch_acc": 0.125,
+      "write_failure_branch_acc": 0.9375,
+      "success_failure_pair_acc": 0.025,
+      "write_success_failure_pair_acc": 0.0625,
+      "unique_action_prefix_rate": 0.2,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ASK_USER": 77,
+          "ANSWER": 2,
+          "ACT_RETRIEVE_USER": 1
+        },
+        "failure": {
+          "ASK_USER": 68,
+          "ACT_RETRIEVE_USER": 11,
+          "ANSWER": 1
+        },
+        "empty": {
+          "ASK_USER": 69,
+          "ACT_RETRIEVE_USER": 8,
+          "ANSWER": 3
+        },
+        "conflict": {
+          "ASK_USER": 76,
+          "ACT_RETRIEVE_USER": 3,
+          "ANSWER": 1
+        }
+      },
+      "mean_source_response_norm": 1.0208426713943481,
+      "method": "Source Counterfactual Response",
+      "correct_flip_rate": 0.24375,
+      "harmful_flip_rate": 0.196875,
+      "write_correct_flip_rate": 0.28125,
+      "write_harmful_flip_rate": 0.046875
+    },
+    {
+      "branch_acc_all": 0.6875,
+      "branch_acc_write": 0.5,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.0,
+      "unique_action_write_prefix_rate": 0.0,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 80
+        }
+      },
+      "method": "Static Low-Rank",
+      "correct_flip_rate": 0.0,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.0,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.76875,
+      "branch_acc_write": 0.828125,
+      "write_success_branch_acc": 1.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 1.0,
+      "write_success_failure_pair_acc": 1.0,
+      "unique_action_prefix_rate": 0.45,
+      "unique_action_write_prefix_rate": 1.0,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 45,
+          "VERIFY": 19,
+          "STOP": 10,
+          "ANSWER": 6
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 57,
+          "VERIFY": 23
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "VERIFY": 20
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Oracle Correct Write Branch + Soft Hierarchical",
+      "correct_flip_rate": 0.08125,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.328125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.728125,
+      "branch_acc_write": 0.625,
+      "write_success_branch_acc": 0.1875,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8375,
+      "write_success_failure_pair_acc": 0.1875,
+      "unique_action_prefix_rate": 0.325,
+      "unique_action_write_prefix_rate": 0.375,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 51,
+          "VERIFY": 26,
+          "STOP": 2,
+          "ANSWER": 1
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 67,
+          "VERIFY": 13
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "VERIFY": 20
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Calibrated Write-Pair Prior + Soft Hierarchical",
+      "correct_flip_rate": 0.040625,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.6875,
+      "branch_acc_write": 0.5,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.0,
+      "unique_action_write_prefix_rate": 0.0,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 80
+        }
+      },
+      "method": "Oracle Source Branch Response + Broadcast",
+      "correct_flip_rate": 0.0,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.0,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.784375,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.4625,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 52,
+          "VERIFY": 28
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 69,
+          "VERIFY": 11
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 64,
+          "VERIFY": 16
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 52,
+          "VERIFY": 28
+        }
+      },
+      "method": "Oracle Source Branch Response + Hard Branch-First",
+      "correct_flip_rate": 0.096875,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.7875,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.7875,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.5375,
+      "unique_action_write_prefix_rate": 0.3125,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 48,
+          "VERIFY": 31,
+          "ASK_USER": 1
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 65,
+          "VERIFY": 15
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 61,
+          "VERIFY": 19
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 50,
+          "VERIFY": 30
+        }
+      },
+      "method": "Oracle Source Branch Response + Soft Hierarchical",
+      "correct_flip_rate": 0.103125,
+      "harmful_flip_rate": 0.003125,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.6875,
+      "branch_acc_write": 0.5,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.0,
+      "unique_action_write_prefix_rate": 0.0,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 80
+        }
+      },
+      "method": "Oracle Skill + Branch Operator + Broadcast",
+      "correct_flip_rate": 0.0,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.0,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.725,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.2625,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 52,
+          "VERIFY": 28
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 66,
+          "VERIFY": 14
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Oracle Skill + Branch Operator + Hard Branch-First",
+      "correct_flip_rate": 0.0375,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.734375,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.3625,
+      "unique_action_write_prefix_rate": 0.3125,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 46,
+          "VERIFY": 34
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 67,
+          "VERIFY": 13
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 64,
+          "VERIFY": 16
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 67,
+          "VERIFY": 13
+        }
+      },
+      "method": "Oracle Skill + Branch Operator + Soft Hierarchical",
+      "correct_flip_rate": 0.046875,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.6875,
+      "branch_acc_write": 0.5,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.0,
+      "unique_action_write_prefix_rate": 0.0,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 80
+        }
+      },
+      "method": "Predicted Skill + Branch Operator + Broadcast",
+      "correct_flip_rate": 0.0,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.0,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.725,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.25,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 54,
+          "VERIFY": 26
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 67,
+          "VERIFY": 13
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        }
+      },
+      "method": "Predicted Skill + Branch Operator + Hard Branch-First",
+      "correct_flip_rate": 0.0375,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.734375,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.425,
+      "unique_action_write_prefix_rate": 0.375,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 42,
+          "VERIFY": 38
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 61,
+          "VERIFY": 19
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 67,
+          "VERIFY": 13
+        }
+      },
+      "method": "Predicted Skill + Branch Operator + Soft Hierarchical",
+      "correct_flip_rate": 0.046875,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.71875,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.2875,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 55,
+          "VERIFY": 25
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "VERIFY": 20
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Oracle Skill + Pair-Contrastive Write Operator",
+      "correct_flip_rate": 0.03125,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.71875,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.2875,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 54,
+          "VERIFY": 26
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "VERIFY": 20
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Predicted Skill MLP + Pair-Contrastive Write Operator",
+      "correct_flip_rate": 0.03125,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.71875,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.2875,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 54,
+          "VERIFY": 26
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "VERIFY": 20
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Prototype Binder + Pair-Contrastive Write Operator",
+      "correct_flip_rate": 0.03125,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.71875,
+      "branch_acc_write": 0.578125,
+      "write_success_branch_acc": 0.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.8,
+      "write_success_failure_pair_acc": 0.0,
+      "unique_action_prefix_rate": 0.2875,
+      "unique_action_write_prefix_rate": 0.1875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 54,
+          "VERIFY": 26
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "VERIFY": 20
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Ridge Binder + Pair-Contrastive Write Operator",
+      "correct_flip_rate": 0.03125,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.078125,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 0.7625,
+      "branch_acc_write": 0.796875,
+      "write_success_branch_acc": 0.875,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 0.975,
+      "write_success_failure_pair_acc": 0.875,
+      "unique_action_prefix_rate": 0.425,
+      "unique_action_write_prefix_rate": 0.875,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 45,
+          "VERIFY": 21,
+          "STOP": 10,
+          "ANSWER": 4
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 68,
+          "VERIFY": 12
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "VERIFY": 20
+        },
+        "conflict": {
+          "ACT_RETRIEVE_ORDER": 70,
+          "VERIFY": 10
+        }
+      },
+      "method": "Predicted Pair Operator + Calibrated Write-Pair Prior",
+      "correct_flip_rate": 0.075,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.296875,
+      "write_harmful_flip_rate": 0.0
+    },
+    {
+      "branch_acc_all": 1.0,
+      "branch_acc_write": 1.0,
+      "write_success_branch_acc": 1.0,
+      "write_failure_branch_acc": 1.0,
+      "success_failure_pair_acc": 1.0,
+      "write_success_failure_pair_acc": 1.0,
+      "unique_action_prefix_rate": 1.0,
+      "unique_action_write_prefix_rate": 1.0,
+      "action_distribution_by_observation": {
+        "success": {
+          "ACT_RETRIEVE_ORDER": 60,
+          "STOP": 10,
+          "ANSWER": 6,
+          "VERIFY": 4
+        },
+        "failure": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "empty": {
+          "ACT_RETRIEVE_ORDER": 80
+        },
+        "conflict": {
+          "ASK_USER": 58,
+          "VERIFY": 22
+        }
+      },
+      "method": "Rule-Constrained Branch Ceiling",
+      "correct_flip_rate": 0.3125,
+      "harmful_flip_rate": 0.0,
+      "write_correct_flip_rate": 0.5,
+      "write_harmful_flip_rate": 0.0
+    }
+  ]
+}
